@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 11.00.9600.17207"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE class=runner-toptable cellPadding=0>
+  <TBODY>
+  <TR class=runner-header>
+    <TD class=runner-top colSpan=3>
+      {BEGIN container_toplinks}
+      <TABLE class="runner-c runner-c-toplinks" cellPadding=0>
+        <TBODY>
+        <TR class="{$cheaderclass_toplinks}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1">
+          <TD class=runner-cl></TD>
+          <TD class=runner-cc>
+            <TABLE class=runner-hc cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD class="runner-cc filler">
+                  </TD>
+                {BEGIN asearch_link}<TD class="runner-cc runner-br runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}>
+                  <SPAN><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$advsearchlink_attrs}>Advanced 
+                  search</A> </SPAN></SPAN></TD>{END asearch_link}</TR></TBODY></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_toplinks}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_toplinks}
+      {BEGIN container_search}
+      <TABLE class="runner-c runner-c-search" cellPadding=0>
+        <TBODY>
+        <TR class="{$cheaderclass_search}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1">
+          <TD class=runner-cl></TD>
+          <TD class=runner-cc>
+            <TABLE class=runner-hc cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                {BEGIN searchform_block}<TD class="runner-cc runner-bl runner-b-search" {$brickclass_search}>
+                  <SPAN><SPAN>{BEGIN searchform_text}<INPUT size=25 {$searchfor_attrs}>{END searchform_text} &nbsp; {BEGIN searchform_search}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button-img href="#" {$searchbutton_attrs}><IMG src="images/search/search.gif"></A> </SPAN>{END searchform_search}&nbsp; {BEGIN searchform_showall}<SPAN class=runner-btnframe {$showAllCont_attrs}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$showallbutton_attrs}>Show 
+                  all</A> </SPAN>{END searchform_showall}</SPAN></SPAN></TD>
+                {END searchform_block}{BEGIN searchformbuttons_block}<TD class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}>
+                  <SPAN>{BEGIN searchPanelTopButtons}<SPAN>&nbsp; <SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=showSrchWin{$id} class=runner-button-img href="#" {$showHideSearchWin_attrs}><IMG src="images/search/showWindowPin.gif"></A> </SPAN>&nbsp; <SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=showOptPanel{$id} class=runner-button-img href="#" {$showHideSearchPanel_attrs}><IMG src="images/search/showOptions.gif"></A> </SPAN></SPAN>{END searchPanelTopButtons}</SPAN></TD>
+                {END searchformbuttons_block}<TD class="runner-cc filler">
+                  </TD>
+                {BEGIN details_block}<TD class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}>
+                  <SPAN><SPAN 
+                  {$details_attrs}>Details found: <B><SPAN 
+                  class=runner-details_found_count>{$records_found}</SPAN></B> 
+                  </SPAN></SPAN></TD>
+                {END details_block}{BEGIN pages_block}<TD class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}>
+                  <SPAN><SPAN 
+                  {$pages_attrs}>Page <B>{$page}</B> of <B>{$maxpages}</B> </SPAN></SPAN></TD>
+                {END pages_block}{BEGIN recordspp_block}<TD class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}>
+                  <SPAN><SPAN id=recordspp_block{$id} name="recordspp_block{$id}">Records Per Page:&nbsp;{$recsPerPage} 
+              </SPAN></SPAN></TD>{END recordspp_block}</TR></TBODY></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_search}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_search}</TD></TR>
+  <TR class=runner-body>
+    <TD class="runner-left {$blockclass_left}">
+      {BEGIN container_left}
+      <TABLE class="runner-c runner-c-left" cellPadding=0>
+        <TBODY>
+        <TR class="{$cheaderclass_left}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        {BEGIN searchPanel}<TR class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents">
+            
+            <DIV class=searchPanelContainer>{$adv_search_panel} </DIV></TD>
+          <TD class=runner-cr></TD></TR>
+        {END searchPanel}{BEGIN menu_block}{$mainmenu}{END menu_block}<TR class="{$cfooterclass_left}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_left}</TD>
+    <TD class="runner-center {$blockclass_center}">
+      {BEGIN container_recordcontrols}
+      <TABLE class="runner-c runner-c-recordcontrols" cellPadding=0>
+        <TBODY>
+        <TR class="{$cheaderclass_recordcontrols}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1">
+          <TD class=runner-cl></TD>
+          <TD class=runner-cc>
+            <TABLE class=runner-hc cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                {BEGIN newrecord_controls_block}<TD class="runner-cc runner-bl runner-b-recordcontrols_new" {$brickclass_recordcontrols_new}>
+                  <SPAN>{BEGIN add_link}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$addlink_attrs}>Add New 
+                  Application</A> </SPAN>{END add_link}</SPAN></TD>
+                {END newrecord_controls_block}{BEGIN record_controls_block}<TD class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}>
+                  <SPAN>{BEGIN deleteselected_link}<SPAN class=runner-btnframe {$deleteselectedlink_span}><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$deleteselectedlink_attrs}>Delete selected</A> </SPAN>{END deleteselected_link}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=Grant_Admission_to_Selected_Students class=runner-button href="#" typeid="ib">Grant&nbsp;Admission&nbsp;to&nbsp;Selected&nbsp;Students</A></SPAN></SPAN></TD>
+                {END record_controls_block}<TD class="runner-cc filler">
+                  </TD></TR></TBODY></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_recordcontrols}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_recordcontrols}
+      {BEGIN container_message}
+      <TABLE class="runner-c runner-c-message" cellPadding=0>
+        <TBODY>
+        <TR class="{$cheaderclass_message}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1">
+          <TD class=runner-cl></TD>
+          <TD class=runner-cc>
+            <TABLE class=runner-hc cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                {BEGIN message_block}<TD class="runner-cc runner-bc runner-b-message" {$brickclass_message}>
+                  <SPAN>
+                  <DIV class=runner-message>{$message}</DIV></SPAN></TD>{END message_block}</TR></TBODY></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_message}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_message}
+      {BEGIN container_grid}
+      {BEGIN grid_block}<TABLE class="runner-c runner-c-grid runner-b-grid" cellPadding=0>
+        <THEAD>{BEGIN grid_header}
+        <TR class="runner-toprow style1 {$gridHeader_class}">{BEGIN record_header}
+          <TH class=runner-cl><IMG src="images/spacer.gif"></TH>
+          {BEGIN listIcons_column}<TH class=runner-cc iEditCont="all"></TH>
+          {END listIcons_column}{BEGIN checkbox_column}<TH class="runner-cc runner-bc">
+            <INPUT type=checkbox 
+            {$checkboxheader_attrs}></TH>
+          {END checkbox_column}{BEGIN ID_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN ID_fieldheader}<A {$ID_orderlinkattrs}>ID </A>{END ID_fieldheader}</TH>
+          {END ID_fieldheadercolumn}{BEGIN ApplicationNumber_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN ApplicationNumber_fieldheader}<A {$ApplicationNumber_orderlinkattrs}>Application Number </A>{END ApplicationNumber_fieldheader}</TH>
+          {END ApplicationNumber_fieldheadercolumn}{BEGIN ApplicationDate_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN ApplicationDate_fieldheader}<A {$ApplicationDate_orderlinkattrs}>Application Date </A>{END ApplicationDate_fieldheader}</TH>
+          {END ApplicationDate_fieldheadercolumn}{BEGIN ApplicationFormPrice_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN ApplicationFormPrice_fieldheader}<A {$ApplicationFormPrice_orderlinkattrs}>Application Form Price 
+            </A>{END ApplicationFormPrice_fieldheader}</TH>
+          {END ApplicationFormPrice_fieldheadercolumn}{BEGIN AcademicYear_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN AcademicYear_fieldheader}<A {$AcademicYear_orderlinkattrs}>Academic Year </A>{END AcademicYear_fieldheader}</TH>
+          {END AcademicYear_fieldheadercolumn}{BEGIN ClassToAdmission_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN ClassToAdmission_fieldheader}<A {$ClassToAdmission_orderlinkattrs}>Class To Admission </A>{END ClassToAdmission_fieldheader}</TH>
+          {END ClassToAdmission_fieldheadercolumn}{BEGIN FirstYearSectionID_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN FirstYearSectionID_fieldheader}<A {$FirstYearSectionID_orderlinkattrs}>First Year Section ID 
+          </A>{END FirstYearSectionID_fieldheader}</TH>
+          {END FirstYearSectionID_fieldheadercolumn}{BEGIN AdmissionProcess_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN AdmissionProcess_fieldheader}<A {$AdmissionProcess_orderlinkattrs}>Admission Process </A>{END AdmissionProcess_fieldheader}</TH>
+          {END AdmissionProcess_fieldheadercolumn}{BEGIN EntranceExamPercentage_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN EntranceExamPercentage_fieldheader}<A {$EntranceExamPercentage_orderlinkattrs}>Entrance Exam Percentage 
+            </A>{END EntranceExamPercentage_fieldheader}</TH>
+          {END EntranceExamPercentage_fieldheadercolumn}{BEGIN EntranceDetailsMarks_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN EntranceDetailsMarks_fieldheader}<A {$EntranceDetailsMarks_orderlinkattrs}>Entrance Details Marks 
+            </A>{END EntranceDetailsMarks_fieldheader}</TH>
+          {END EntranceDetailsMarks_fieldheadercolumn}{BEGIN IsTransferFromOtherSchool_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN IsTransferFromOtherSchool_fieldheader}<A {$IsTransferFromOtherSchool_orderlinkattrs}>Is Transfer From Other 
+            School </A>{END IsTransferFromOtherSchool_fieldheader}</TH>
+          {END IsTransferFromOtherSchool_fieldheadercolumn}{BEGIN IsAdmissionGranted_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN IsAdmissionGranted_fieldheader}<A {$IsAdmissionGranted_orderlinkattrs}>Is Admission Granted 
+          </A>{END IsAdmissionGranted_fieldheader}</TH>
+          {END IsAdmissionGranted_fieldheadercolumn}{BEGIN IsAdmitted_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN IsAdmitted_fieldheader}<A {$IsAdmitted_orderlinkattrs}>Is Admitted </A>{END IsAdmitted_fieldheader}</TH>
+          {END IsAdmitted_fieldheadercolumn}{BEGIN DateOfAdmission_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN DateOfAdmission_fieldheader}<A {$DateOfAdmission_orderlinkattrs}>Date Of Admission </A>{END DateOfAdmission_fieldheader}</TH>
+          {END DateOfAdmission_fieldheadercolumn}{BEGIN SalutationID_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SalutationID_fieldheader}<A {$SalutationID_orderlinkattrs}>Salutation ID </A>{END SalutationID_fieldheader}</TH>
+          {END SalutationID_fieldheadercolumn}{BEGIN FirstName_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN FirstName_fieldheader}<A {$FirstName_orderlinkattrs}>First Name </A>{END FirstName_fieldheader}</TH>
+          {END FirstName_fieldheadercolumn}{BEGIN MiddleName_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN MiddleName_fieldheader}<A {$MiddleName_orderlinkattrs}>Middle Name </A>{END MiddleName_fieldheader}</TH>
+          {END MiddleName_fieldheadercolumn}{BEGIN LastName_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN LastName_fieldheader}<A {$LastName_orderlinkattrs}>Last Name </A>{END LastName_fieldheader}</TH>
+          {END LastName_fieldheadercolumn}{BEGIN Photo_fieldheadercolumn}<TH class="runner-cc ">{BEGIN Photo_fieldheader}
+            Photo {END Photo_fieldheader}</TH>
+          {END Photo_fieldheadercolumn}{BEGIN DateOfBirth_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN DateOfBirth_fieldheader}<A {$DateOfBirth_orderlinkattrs}>Date Of Birth </A>{END DateOfBirth_fieldheader}</TH>
+          {END DateOfBirth_fieldheadercolumn}{BEGIN BirthCertificate_fieldheadercolumn}<TH class="runner-cc ">{BEGIN BirthCertificate_fieldheader}
+            Birth Certificate 
+{END BirthCertificate_fieldheader}</TH>
+          {END BirthCertificate_fieldheadercolumn}{BEGIN Gender_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN Gender_fieldheader}<A {$Gender_orderlinkattrs}>Gender </A>{END Gender_fieldheader}</TH>
+          {END Gender_fieldheadercolumn}{BEGIN MotherTongue_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN MotherTongue_fieldheader}<A {$MotherTongue_orderlinkattrs}>Mother Tongue </A>{END MotherTongue_fieldheader}</TH>
+          {END MotherTongue_fieldheadercolumn}{BEGIN Religion_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN Religion_fieldheader}<A {$Religion_orderlinkattrs}>Religion </A>{END Religion_fieldheader}</TH>
+          {END Religion_fieldheadercolumn}{BEGIN SocialClass_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SocialClass_fieldheader}<A {$SocialClass_orderlinkattrs}>Social Class </A>{END SocialClass_fieldheader}</TH>
+          {END SocialClass_fieldheadercolumn}{BEGIN Weight_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN Weight_fieldheader}<A {$Weight_orderlinkattrs}>Weight </A>{END Weight_fieldheader}</TH>
+          {END Weight_fieldheadercolumn}{BEGIN Height_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN Height_fieldheader}<A {$Height_orderlinkattrs}>Height </A>{END Height_fieldheader}</TH>
+          {END Height_fieldheadercolumn}{BEGIN BloodGroup_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN BloodGroup_fieldheader}<A {$BloodGroup_orderlinkattrs}>Blood Group </A>{END BloodGroup_fieldheader}</TH>
+          {END BloodGroup_fieldheadercolumn}{BEGIN HostelRequired_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN HostelRequired_fieldheader}<A {$HostelRequired_orderlinkattrs}>Hostel Required </A>{END HostelRequired_fieldheader}</TH>
+          {END HostelRequired_fieldheadercolumn}{BEGIN BusRequired_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN BusRequired_fieldheader}<A {$BusRequired_orderlinkattrs}>Bus Required </A>{END BusRequired_fieldheader}</TH>
+          {END BusRequired_fieldheadercolumn}{BEGIN SpecialCareRequired_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SpecialCareRequired_fieldheader}<A {$SpecialCareRequired_orderlinkattrs}>Special Care Required 
+            </A>{END SpecialCareRequired_fieldheader}</TH>
+          {END SpecialCareRequired_fieldheadercolumn}{BEGIN FatherOrGuardianName_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN FatherOrGuardianName_fieldheader}<A {$FatherOrGuardianName_orderlinkattrs}>Father Or Guardian Name 
+            </A>{END FatherOrGuardianName_fieldheader}</TH>
+          {END FatherOrGuardianName_fieldheadercolumn}{BEGIN FatherOrGuardianOccupation_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN FatherOrGuardianOccupation_fieldheader}<A {$FatherOrGuardianOccupation_orderlinkattrs}>Father Or Guardian 
+            Occupation </A>{END FatherOrGuardianOccupation_fieldheader}</TH>
+          {END FatherOrGuardianOccupation_fieldheadercolumn}{BEGIN FatherOrGuardianQualification_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN FatherOrGuardianQualification_fieldheader}<A {$FatherOrGuardianQualification_orderlinkattrs}>Father Or Guardian 
+            Qualification </A>{END FatherOrGuardianQualification_fieldheader}</TH>
+          {END FatherOrGuardianQualification_fieldheadercolumn}{BEGIN AddressLine1_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN AddressLine1_fieldheader}<A {$AddressLine1_orderlinkattrs}>Address Line1 </A>{END AddressLine1_fieldheader}</TH>
+          {END AddressLine1_fieldheadercolumn}{BEGIN AddressLine2_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN AddressLine2_fieldheader}<A {$AddressLine2_orderlinkattrs}>Address Line2 </A>{END AddressLine2_fieldheader}</TH>
+          {END AddressLine2_fieldheadercolumn}{BEGIN CityOrLocation_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN CityOrLocation_fieldheader}<A {$CityOrLocation_orderlinkattrs}>City Or Location </A>{END CityOrLocation_fieldheader}</TH>
+          {END CityOrLocation_fieldheadercolumn}{BEGIN PINCode_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN PINCode_fieldheader}<A {$PINCode_orderlinkattrs}>PINCode </A>{END PINCode_fieldheader}</TH>
+          {END PINCode_fieldheadercolumn}{BEGIN FatherOrGuardianMobileNumber_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN FatherOrGuardianMobileNumber_fieldheader}<A {$FatherOrGuardianMobileNumber_orderlinkattrs}>Father Or Guardian 
+            Mobile Number </A>{END FatherOrGuardianMobileNumber_fieldheader}</TH>
+          {END FatherOrGuardianMobileNumber_fieldheadercolumn}{BEGIN FatherOrGuardianEmailID_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN FatherOrGuardianEmailID_fieldheader}<A {$FatherOrGuardianEmailID_orderlinkattrs}>Father Or Guardian Email 
+            ID </A>{END FatherOrGuardianEmailID_fieldheader}</TH>
+          {END FatherOrGuardianEmailID_fieldheadercolumn}{BEGIN LandlineNumber_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN LandlineNumber_fieldheader}<A {$LandlineNumber_orderlinkattrs}>Landline Number </A>{END LandlineNumber_fieldheader}</TH>
+          {END LandlineNumber_fieldheadercolumn}{BEGIN AddressProof_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN AddressProof_fieldheader}<A {$AddressProof_orderlinkattrs}>Address Proof </A>{END AddressProof_fieldheader}</TH>
+          {END AddressProof_fieldheadercolumn}{BEGIN AddressProofScan_fieldheadercolumn}<TH class="runner-cc ">{BEGIN AddressProofScan_fieldheader}
+            Address Proof Scan 
+          {END AddressProofScan_fieldheader}</TH>
+          {END AddressProofScan_fieldheadercolumn}{BEGIN IdentityProof_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN IdentityProof_fieldheader}<A {$IdentityProof_orderlinkattrs}>Identity Proof </A>{END IdentityProof_fieldheader}</TH>
+          {END IdentityProof_fieldheadercolumn}{BEGIN IdentityProofScan_fieldheadercolumn}<TH class="runner-cc ">{BEGIN IdentityProofScan_fieldheader}
+            Identity Proof Scan 
+          {END IdentityProofScan_fieldheader}</TH>
+          {END IdentityProofScan_fieldheadercolumn}{BEGIN MotherName_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN MotherName_fieldheader}<A {$MotherName_orderlinkattrs}>Mother Name </A>{END MotherName_fieldheader}</TH>
+          {END MotherName_fieldheadercolumn}{BEGIN MotherOccupation_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN MotherOccupation_fieldheader}<A {$MotherOccupation_orderlinkattrs}>Mother Occupation </A>{END MotherOccupation_fieldheader}</TH>
+          {END MotherOccupation_fieldheadercolumn}{BEGIN MotherQualification_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN MotherQualification_fieldheader}<A {$MotherQualification_orderlinkattrs}>Mother Qualification 
+          </A>{END MotherQualification_fieldheader}</TH>
+          {END MotherQualification_fieldheadercolumn}{BEGIN MotherMobileNumber_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN MotherMobileNumber_fieldheader}<A {$MotherMobileNumber_orderlinkattrs}>Mother Mobile Number 
+          </A>{END MotherMobileNumber_fieldheader}</TH>
+          {END MotherMobileNumber_fieldheadercolumn}{BEGIN MotherEmailID_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN MotherEmailID_fieldheader}<A {$MotherEmailID_orderlinkattrs}>Mother Email ID </A>{END MotherEmailID_fieldheader}</TH>
+          {END MotherEmailID_fieldheadercolumn}{BEGIN PrevSchoolName_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN PrevSchoolName_fieldheader}<A {$PrevSchoolName_orderlinkattrs}>Prev School Name </A>{END PrevSchoolName_fieldheader}</TH>
+          {END PrevSchoolName_fieldheadercolumn}{BEGIN SchoolAddressLine1_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SchoolAddressLine1_fieldheader}<A {$SchoolAddressLine1_orderlinkattrs}>School Address Line1 
+          </A>{END SchoolAddressLine1_fieldheader}</TH>
+          {END SchoolAddressLine1_fieldheadercolumn}{BEGIN SchoolAddressLine2_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SchoolAddressLine2_fieldheader}<A {$SchoolAddressLine2_orderlinkattrs}>School Address Line2 
+          </A>{END SchoolAddressLine2_fieldheader}</TH>
+          {END SchoolAddressLine2_fieldheadercolumn}{BEGIN SchoolCityOrLocationOrTownOrVillage_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SchoolCityOrLocationOrTownOrVillage_fieldheader}<A {$SchoolCityOrLocationOrTownOrVillage_orderlinkattrs}>School City Or 
+            Location Or Town Or Village </A>{END SchoolCityOrLocationOrTownOrVillage_fieldheader}</TH>
+          {END SchoolCityOrLocationOrTownOrVillage_fieldheadercolumn}{BEGIN SchoolPINCode_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SchoolPINCode_fieldheader}<A {$SchoolPINCode_orderlinkattrs}>School PINCode </A>{END SchoolPINCode_fieldheader}</TH>
+          {END SchoolPINCode_fieldheadercolumn}{BEGIN SchoolStateOrProvince_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SchoolStateOrProvince_fieldheader}<A {$SchoolStateOrProvince_orderlinkattrs}>School State Or Province 
+            </A>{END SchoolStateOrProvince_fieldheader}</TH>
+          {END SchoolStateOrProvince_fieldheadercolumn}{BEGIN SchoolCountry_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SchoolCountry_fieldheader}<A {$SchoolCountry_orderlinkattrs}>School Country </A>{END SchoolCountry_fieldheader}</TH>
+          {END SchoolCountry_fieldheadercolumn}{BEGIN SchoolPhoneNumber_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SchoolPhoneNumber_fieldheader}<A {$SchoolPhoneNumber_orderlinkattrs}>School Phone Number 
+</A>{END SchoolPhoneNumber_fieldheader}</TH>
+          {END SchoolPhoneNumber_fieldheadercolumn}{BEGIN SchoolEmailID_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SchoolEmailID_fieldheader}<A {$SchoolEmailID_orderlinkattrs}>School Email ID </A>{END SchoolEmailID_fieldheader}</TH>
+          {END SchoolEmailID_fieldheadercolumn}{BEGIN Board_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN Board_fieldheader}<A {$Board_orderlinkattrs}>Board </A>{END Board_fieldheader}</TH>
+          {END Board_fieldheadercolumn}{BEGIN LastClassPassedOrAttained_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN LastClassPassedOrAttained_fieldheader}<A {$LastClassPassedOrAttained_orderlinkattrs}>Last Class Passed Or 
+            Attained </A>{END LastClassPassedOrAttained_fieldheader}</TH>
+          {END LastClassPassedOrAttained_fieldheadercolumn}{BEGIN PercentageInLastExam_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN PercentageInLastExam_fieldheader}<A {$PercentageInLastExam_orderlinkattrs}>Percentage In Last Exam 
+            </A>{END PercentageInLastExam_fieldheader}</TH>
+          {END PercentageInLastExam_fieldheadercolumn}{BEGIN DetailsMarks_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN DetailsMarks_fieldheader}<A {$DetailsMarks_orderlinkattrs}>Details Marks </A>{END DetailsMarks_fieldheader}</TH>
+          {END DetailsMarks_fieldheadercolumn}{BEGIN MarkSheet_fieldheadercolumn}<TH class="runner-cc ">{BEGIN MarkSheet_fieldheader}
+            Mark Sheet {END MarkSheet_fieldheader}</TH>
+          {END MarkSheet_fieldheadercolumn}{BEGIN TransferCertificate_fieldheadercolumn}<TH class="runner-cc ">{BEGIN TransferCertificate_fieldheader}
+            Transfer Certificate 
+          {END TransferCertificate_fieldheader}</TH>
+          {END TransferCertificate_fieldheadercolumn}{BEGIN CauseOfTransfer_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN CauseOfTransfer_fieldheader}<A {$CauseOfTransfer_orderlinkattrs}>Cause Of Transfer </A>{END CauseOfTransfer_fieldheader}</TH>
+          {END CauseOfTransfer_fieldheadercolumn}{BEGIN SignatureOfApplicationRecipient_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SignatureOfApplicationRecipient_fieldheader}<A {$SignatureOfApplicationRecipient_orderlinkattrs}>Signature Of 
+            Application Recipient </A>{END SignatureOfApplicationRecipient_fieldheader}</TH>
+          {END SignatureOfApplicationRecipient_fieldheadercolumn}{BEGIN SignatureOfPrincipal_fieldheadercolumn}<TH class="runner-cc ">
+            {BEGIN SignatureOfPrincipal_fieldheader}<A {$SignatureOfPrincipal_orderlinkattrs}>Signature Of Principal 
+            </A>{END SignatureOfPrincipal_fieldheader}</TH>
+          {END SignatureOfPrincipal_fieldheadercolumn}{BEGIN Year_fieldheadercolumn}<TH class="runner-cc runner-clast">
+            {BEGIN Year_fieldheader}<A {$Year_orderlinkattrs}>Year </A>{END Year_fieldheader}</TH>
+          {END Year_fieldheadercolumn}<TD class="runner-cc runner-clast">
+            </TD>
+          <TH class=runner-cr><IMG src="images/spacer.gif"></TH>
+          {BEGIN endrecordheader_block}<TH class=runner-cs></TH>{END endrecordheader_block}{END record_header}</TR>{END grid_header}</THEAD>
+        <TBODY>
+        {BEGIN grid_row}<TR class="runner-row style1 {$rowclass}" {$rowstyle} {$rowattrs}>{BEGIN grid_record}
+          <TD class=runner-cl {$rowstyle}></TD>
+          {BEGIN listIcons_column}<TD class="runner-cc runner-bc runner-icons" iEditCont="all" {$rowstyle}>
+            {BEGIN edit_column}{BEGIN edit_link}<A title=Edit class=runner-button-img {$editlink_attrs}><IMG class=runner-cicon alt=Edit src="images/icon_edit_new.gif"></A> {END edit_link}{END edit_column}{BEGIN view_column}{BEGIN view_link}<A title=View class=runner-button-img {$viewlink_attrs}><IMG class=runner-cicon alt=View src="images/icon_view_new.gif"></A>{END view_link}{END view_column}</TD>
+          {END listIcons_column}{BEGIN checkbox_column}<TD class="runner-cc runner-bc" iEditCont="checkBox" {$rowstyle}>
+            {BEGIN checkbox}<INPUT type=checkbox {$checkbox_attrs}>{END checkbox}</TD>
+          {END checkbox_column}{BEGIN ID_fieldcolumn}<TD class="runner-cc  {$ID_class}" {$ID_style}>
+            {$ID_value}</TD>
+          {END ID_fieldcolumn}{BEGIN ApplicationNumber_fieldcolumn}<TD class="runner-cc  {$ApplicationNumber_class}" {$ApplicationNumber_style}>
+            {$ApplicationNumber_value}</TD>
+          {END ApplicationNumber_fieldcolumn}{BEGIN ApplicationDate_fieldcolumn}<TD class="runner-cc  {$ApplicationDate_class}" {$ApplicationDate_style}>
+            {$ApplicationDate_value}</TD>
+          {END ApplicationDate_fieldcolumn}{BEGIN ApplicationFormPrice_fieldcolumn}<TD class="runner-cc  {$ApplicationFormPrice_class}" {$ApplicationFormPrice_style}>
+            {$ApplicationFormPrice_value}</TD>
+          {END ApplicationFormPrice_fieldcolumn}{BEGIN AcademicYear_fieldcolumn}<TD class="runner-cc  {$AcademicYear_class}" {$AcademicYear_style}>
+            {$AcademicYear_value}</TD>
+          {END AcademicYear_fieldcolumn}{BEGIN ClassToAdmission_fieldcolumn}<TD class="runner-cc  {$ClassToAdmission_class}" {$ClassToAdmission_style}>
+            {$ClassToAdmission_value}</TD>
+          {END ClassToAdmission_fieldcolumn}{BEGIN FirstYearSectionID_fieldcolumn}<TD class="runner-cc  {$FirstYearSectionID_class}" {$FirstYearSectionID_style}>
+            {$FirstYearSectionID_value}</TD>
+          {END FirstYearSectionID_fieldcolumn}{BEGIN AdmissionProcess_fieldcolumn}<TD class="runner-cc  {$AdmissionProcess_class}" {$AdmissionProcess_style}>
+            {$AdmissionProcess_value}</TD>
+          {END AdmissionProcess_fieldcolumn}{BEGIN EntranceExamPercentage_fieldcolumn}<TD class="runner-cc  {$EntranceExamPercentage_class}" {$EntranceExamPercentage_style}>
+            {$EntranceExamPercentage_value}</TD>
+          {END EntranceExamPercentage_fieldcolumn}{BEGIN EntranceDetailsMarks_fieldcolumn}<TD class="runner-cc  {$EntranceDetailsMarks_class}" {$EntranceDetailsMarks_style}>
+            {$EntranceDetailsMarks_value}</TD>
+          {END EntranceDetailsMarks_fieldcolumn}{BEGIN IsTransferFromOtherSchool_fieldcolumn}<TD class="runner-cc  {$IsTransferFromOtherSchool_class}" {$IsTransferFromOtherSchool_style}>
+            {$IsTransferFromOtherSchool_value}</TD>
+          {END IsTransferFromOtherSchool_fieldcolumn}{BEGIN IsAdmissionGranted_fieldcolumn}<TD class="runner-cc  {$IsAdmissionGranted_class}" {$IsAdmissionGranted_style}>
+            {$IsAdmissionGranted_value}</TD>
+          {END IsAdmissionGranted_fieldcolumn}{BEGIN IsAdmitted_fieldcolumn}<TD class="runner-cc  {$IsAdmitted_class}" {$IsAdmitted_style}>
+            {$IsAdmitted_value}</TD>
+          {END IsAdmitted_fieldcolumn}{BEGIN DateOfAdmission_fieldcolumn}<TD class="runner-cc  {$DateOfAdmission_class}" {$DateOfAdmission_style}>
+            {$DateOfAdmission_value}</TD>
+          {END DateOfAdmission_fieldcolumn}{BEGIN SalutationID_fieldcolumn}<TD class="runner-cc  {$SalutationID_class}" {$SalutationID_style}>
+            {$SalutationID_value}</TD>
+          {END SalutationID_fieldcolumn}{BEGIN FirstName_fieldcolumn}<TD class="runner-cc  {$FirstName_class}" {$FirstName_style}>
+            {$FirstName_value}</TD>
+          {END FirstName_fieldcolumn}{BEGIN MiddleName_fieldcolumn}<TD class="runner-cc  {$MiddleName_class}" {$MiddleName_style}>
+            {$MiddleName_value}</TD>
+          {END MiddleName_fieldcolumn}{BEGIN LastName_fieldcolumn}<TD class="runner-cc  {$LastName_class}" {$LastName_style}>
+            {$LastName_value}</TD>
+          {END LastName_fieldcolumn}{BEGIN Photo_fieldcolumn}<TD class="runner-cc  {$Photo_class}" {$Photo_style}>{$Photo_value}</TD>
+          {END Photo_fieldcolumn}{BEGIN DateOfBirth_fieldcolumn}<TD class="runner-cc  {$DateOfBirth_class}" {$DateOfBirth_style}>
+            {$DateOfBirth_value}</TD>
+          {END DateOfBirth_fieldcolumn}{BEGIN BirthCertificate_fieldcolumn}<TD class="runner-cc  {$BirthCertificate_class}" {$BirthCertificate_style}>
+            {$BirthCertificate_value}</TD>
+          {END BirthCertificate_fieldcolumn}{BEGIN Gender_fieldcolumn}<TD class="runner-cc  {$Gender_class}" {$Gender_style}>
+            {$Gender_value}</TD>
+          {END Gender_fieldcolumn}{BEGIN MotherTongue_fieldcolumn}<TD class="runner-cc  {$MotherTongue_class}" {$MotherTongue_style}>
+            {$MotherTongue_value}</TD>
+          {END MotherTongue_fieldcolumn}{BEGIN Religion_fieldcolumn}<TD class="runner-cc  {$Religion_class}" {$Religion_style}>
+            {$Religion_value}</TD>
+          {END Religion_fieldcolumn}{BEGIN SocialClass_fieldcolumn}<TD class="runner-cc  {$SocialClass_class}" {$SocialClass_style}>
+            {$SocialClass_value}</TD>
+          {END SocialClass_fieldcolumn}{BEGIN Weight_fieldcolumn}<TD class="runner-cc  {$Weight_class}" {$Weight_style}>
+            {$Weight_value}</TD>
+          {END Weight_fieldcolumn}{BEGIN Height_fieldcolumn}<TD class="runner-cc  {$Height_class}" {$Height_style}>
+            {$Height_value}</TD>
+          {END Height_fieldcolumn}{BEGIN BloodGroup_fieldcolumn}<TD class="runner-cc  {$BloodGroup_class}" {$BloodGroup_style}>
+            {$BloodGroup_value}</TD>
+          {END BloodGroup_fieldcolumn}{BEGIN HostelRequired_fieldcolumn}<TD class="runner-cc  {$HostelRequired_class}" {$HostelRequired_style}>
+            {$HostelRequired_value}</TD>
+          {END HostelRequired_fieldcolumn}{BEGIN BusRequired_fieldcolumn}<TD class="runner-cc  {$BusRequired_class}" {$BusRequired_style}>
+            {$BusRequired_value}</TD>
+          {END BusRequired_fieldcolumn}{BEGIN SpecialCareRequired_fieldcolumn}<TD class="runner-cc  {$SpecialCareRequired_class}" {$SpecialCareRequired_style}>
+            {$SpecialCareRequired_value}</TD>
+          {END SpecialCareRequired_fieldcolumn}{BEGIN FatherOrGuardianName_fieldcolumn}<TD class="runner-cc  {$FatherOrGuardianName_class}" {$FatherOrGuardianName_style}>
+            {$FatherOrGuardianName_value}</TD>
+          {END FatherOrGuardianName_fieldcolumn}{BEGIN FatherOrGuardianOccupation_fieldcolumn}<TD class="runner-cc  {$FatherOrGuardianOccupation_class}" {$FatherOrGuardianOccupation_style}>
+            {$FatherOrGuardianOccupation_value}</TD>
+          {END FatherOrGuardianOccupation_fieldcolumn}{BEGIN FatherOrGuardianQualification_fieldcolumn}<TD class="runner-cc  {$FatherOrGuardianQualification_class}" {$FatherOrGuardianQualification_style}>
+            {$FatherOrGuardianQualification_value}</TD>
+          {END FatherOrGuardianQualification_fieldcolumn}{BEGIN AddressLine1_fieldcolumn}<TD class="runner-cc  {$AddressLine1_class}" {$AddressLine1_style}>
+            {$AddressLine1_value}</TD>
+          {END AddressLine1_fieldcolumn}{BEGIN AddressLine2_fieldcolumn}<TD class="runner-cc  {$AddressLine2_class}" {$AddressLine2_style}>
+            {$AddressLine2_value}</TD>
+          {END AddressLine2_fieldcolumn}{BEGIN CityOrLocation_fieldcolumn}<TD class="runner-cc  {$CityOrLocation_class}" {$CityOrLocation_style}>
+            {$CityOrLocation_value}</TD>
+          {END CityOrLocation_fieldcolumn}{BEGIN PINCode_fieldcolumn}<TD class="runner-cc  {$PINCode_class}" {$PINCode_style}>
+            {$PINCode_value}</TD>
+          {END PINCode_fieldcolumn}{BEGIN FatherOrGuardianMobileNumber_fieldcolumn}<TD class="runner-cc  {$FatherOrGuardianMobileNumber_class}" {$FatherOrGuardianMobileNumber_style}>
+            {$FatherOrGuardianMobileNumber_value}</TD>
+          {END FatherOrGuardianMobileNumber_fieldcolumn}{BEGIN FatherOrGuardianEmailID_fieldcolumn}<TD class="runner-cc  {$FatherOrGuardianEmailID_class}" {$FatherOrGuardianEmailID_style}>
+            {$FatherOrGuardianEmailID_value}</TD>
+          {END FatherOrGuardianEmailID_fieldcolumn}{BEGIN LandlineNumber_fieldcolumn}<TD class="runner-cc  {$LandlineNumber_class}" {$LandlineNumber_style}>
+            {$LandlineNumber_value}</TD>
+          {END LandlineNumber_fieldcolumn}{BEGIN AddressProof_fieldcolumn}<TD class="runner-cc  {$AddressProof_class}" {$AddressProof_style}>
+            {$AddressProof_value}</TD>
+          {END AddressProof_fieldcolumn}{BEGIN AddressProofScan_fieldcolumn}<TD class="runner-cc  {$AddressProofScan_class}" {$AddressProofScan_style}>
+            {$AddressProofScan_value}</TD>
+          {END AddressProofScan_fieldcolumn}{BEGIN IdentityProof_fieldcolumn}<TD class="runner-cc  {$IdentityProof_class}" {$IdentityProof_style}>
+            {$IdentityProof_value}</TD>
+          {END IdentityProof_fieldcolumn}{BEGIN IdentityProofScan_fieldcolumn}<TD class="runner-cc  {$IdentityProofScan_class}" {$IdentityProofScan_style}>
+            {$IdentityProofScan_value}</TD>
+          {END IdentityProofScan_fieldcolumn}{BEGIN MotherName_fieldcolumn}<TD class="runner-cc  {$MotherName_class}" {$MotherName_style}>
+            {$MotherName_value}</TD>
+          {END MotherName_fieldcolumn}{BEGIN MotherOccupation_fieldcolumn}<TD class="runner-cc  {$MotherOccupation_class}" {$MotherOccupation_style}>
+            {$MotherOccupation_value}</TD>
+          {END MotherOccupation_fieldcolumn}{BEGIN MotherQualification_fieldcolumn}<TD class="runner-cc  {$MotherQualification_class}" {$MotherQualification_style}>
+            {$MotherQualification_value}</TD>
+          {END MotherQualification_fieldcolumn}{BEGIN MotherMobileNumber_fieldcolumn}<TD class="runner-cc  {$MotherMobileNumber_class}" {$MotherMobileNumber_style}>
+            {$MotherMobileNumber_value}</TD>
+          {END MotherMobileNumber_fieldcolumn}{BEGIN MotherEmailID_fieldcolumn}<TD class="runner-cc  {$MotherEmailID_class}" {$MotherEmailID_style}>
+            {$MotherEmailID_value}</TD>
+          {END MotherEmailID_fieldcolumn}{BEGIN PrevSchoolName_fieldcolumn}<TD class="runner-cc  {$PrevSchoolName_class}" {$PrevSchoolName_style}>
+            {$PrevSchoolName_value}</TD>
+          {END PrevSchoolName_fieldcolumn}{BEGIN SchoolAddressLine1_fieldcolumn}<TD class="runner-cc  {$SchoolAddressLine1_class}" {$SchoolAddressLine1_style}>
+            {$SchoolAddressLine1_value}</TD>
+          {END SchoolAddressLine1_fieldcolumn}{BEGIN SchoolAddressLine2_fieldcolumn}<TD class="runner-cc  {$SchoolAddressLine2_class}" {$SchoolAddressLine2_style}>
+            {$SchoolAddressLine2_value}</TD>
+          {END SchoolAddressLine2_fieldcolumn}{BEGIN SchoolCityOrLocationOrTownOrVillage_fieldcolumn}<TD class="runner-cc  {$SchoolCityOrLocationOrTownOrVillage_class}" {$SchoolCityOrLocationOrTownOrVillage_style}>
+            {$SchoolCityOrLocationOrTownOrVillage_value}</TD>
+          {END SchoolCityOrLocationOrTownOrVillage_fieldcolumn}{BEGIN SchoolPINCode_fieldcolumn}<TD class="runner-cc  {$SchoolPINCode_class}" {$SchoolPINCode_style}>
+            {$SchoolPINCode_value}</TD>
+          {END SchoolPINCode_fieldcolumn}{BEGIN SchoolStateOrProvince_fieldcolumn}<TD class="runner-cc  {$SchoolStateOrProvince_class}" {$SchoolStateOrProvince_style}>
+            {$SchoolStateOrProvince_value}</TD>
+          {END SchoolStateOrProvince_fieldcolumn}{BEGIN SchoolCountry_fieldcolumn}<TD class="runner-cc  {$SchoolCountry_class}" {$SchoolCountry_style}>
+            {$SchoolCountry_value}</TD>
+          {END SchoolCountry_fieldcolumn}{BEGIN SchoolPhoneNumber_fieldcolumn}<TD class="runner-cc  {$SchoolPhoneNumber_class}" {$SchoolPhoneNumber_style}>
+            {$SchoolPhoneNumber_value}</TD>
+          {END SchoolPhoneNumber_fieldcolumn}{BEGIN SchoolEmailID_fieldcolumn}<TD class="runner-cc  {$SchoolEmailID_class}" {$SchoolEmailID_style}>
+            {$SchoolEmailID_value}</TD>
+          {END SchoolEmailID_fieldcolumn}{BEGIN Board_fieldcolumn}<TD class="runner-cc  {$Board_class}" {$Board_style}>{$Board_value}</TD>
+          {END Board_fieldcolumn}{BEGIN LastClassPassedOrAttained_fieldcolumn}<TD class="runner-cc  {$LastClassPassedOrAttained_class}" {$LastClassPassedOrAttained_style}>
+            {$LastClassPassedOrAttained_value}</TD>
+          {END LastClassPassedOrAttained_fieldcolumn}{BEGIN PercentageInLastExam_fieldcolumn}<TD class="runner-cc  {$PercentageInLastExam_class}" {$PercentageInLastExam_style}>
+            {$PercentageInLastExam_value}</TD>
+          {END PercentageInLastExam_fieldcolumn}{BEGIN DetailsMarks_fieldcolumn}<TD class="runner-cc  {$DetailsMarks_class}" {$DetailsMarks_style}>
+            {$DetailsMarks_value}</TD>
+          {END DetailsMarks_fieldcolumn}{BEGIN MarkSheet_fieldcolumn}<TD class="runner-cc  {$MarkSheet_class}" {$MarkSheet_style}>
+            {$MarkSheet_value}</TD>
+          {END MarkSheet_fieldcolumn}{BEGIN TransferCertificate_fieldcolumn}<TD class="runner-cc  {$TransferCertificate_class}" {$TransferCertificate_style}>
+            {$TransferCertificate_value}</TD>
+          {END TransferCertificate_fieldcolumn}{BEGIN CauseOfTransfer_fieldcolumn}<TD class="runner-cc  {$CauseOfTransfer_class}" {$CauseOfTransfer_style}>
+            {$CauseOfTransfer_value}</TD>
+          {END CauseOfTransfer_fieldcolumn}{BEGIN SignatureOfApplicationRecipient_fieldcolumn}<TD class="runner-cc  {$SignatureOfApplicationRecipient_class}" {$SignatureOfApplicationRecipient_style}>
+            {$SignatureOfApplicationRecipient_value}</TD>
+          {END SignatureOfApplicationRecipient_fieldcolumn}{BEGIN SignatureOfPrincipal_fieldcolumn}<TD class="runner-cc  {$SignatureOfPrincipal_class}" {$SignatureOfPrincipal_style}>
+            {$SignatureOfPrincipal_value}</TD>
+          {END SignatureOfPrincipal_fieldcolumn}{BEGIN Year_fieldcolumn}<TD class="runner-cc runner-clast {$Year_class}" {$Year_style}>
+            {$Year_value}</TD>
+          {END Year_fieldcolumn}<TD class="runner-cc runner-clast {$Year_class}">
+            <SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A id=Admit_Student class=runner-button href="#" typeid="ib">Admit&nbsp;Student</A></SPAN></TD>
+          <TD class=runner-cr {$rowstyle}></TD>
+          {BEGIN endrecord_block}<TD class=runner-cs {$endrecordblock_attrs}>
+            </TD>{END endrecord_block}{END grid_record}</TR>
+        {END grid_row}{BEGIN grid_footer}<TR class="runner-bottomrow style1{$gridFooter_class}">{BEGIN record_footer}
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          {BEGIN listIcons_column}<TD class=runner-cc></TD>
+          {END listIcons_column}{BEGIN checkbox_column}<TD class=runner-cc></TD>
+          {END checkbox_column}{BEGIN ID_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END ID_fieldheadercolumn}{BEGIN ApplicationNumber_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END ApplicationNumber_fieldheadercolumn}{BEGIN ApplicationDate_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END ApplicationDate_fieldheadercolumn}{BEGIN ApplicationFormPrice_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END ApplicationFormPrice_fieldheadercolumn}{BEGIN AcademicYear_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END AcademicYear_fieldheadercolumn}{BEGIN ClassToAdmission_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END ClassToAdmission_fieldheadercolumn}{BEGIN FirstYearSectionID_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END FirstYearSectionID_fieldheadercolumn}{BEGIN AdmissionProcess_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END AdmissionProcess_fieldheadercolumn}{BEGIN EntranceExamPercentage_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END EntranceExamPercentage_fieldheadercolumn}{BEGIN EntranceDetailsMarks_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END EntranceDetailsMarks_fieldheadercolumn}{BEGIN IsTransferFromOtherSchool_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END IsTransferFromOtherSchool_fieldheadercolumn}{BEGIN IsAdmissionGranted_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END IsAdmissionGranted_fieldheadercolumn}{BEGIN IsAdmitted_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END IsAdmitted_fieldheadercolumn}{BEGIN DateOfAdmission_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END DateOfAdmission_fieldheadercolumn}{BEGIN SalutationID_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SalutationID_fieldheadercolumn}{BEGIN FirstName_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END FirstName_fieldheadercolumn}{BEGIN MiddleName_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END MiddleName_fieldheadercolumn}{BEGIN LastName_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END LastName_fieldheadercolumn}{BEGIN Photo_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END Photo_fieldheadercolumn}{BEGIN DateOfBirth_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END DateOfBirth_fieldheadercolumn}{BEGIN BirthCertificate_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END BirthCertificate_fieldheadercolumn}{BEGIN Gender_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END Gender_fieldheadercolumn}{BEGIN MotherTongue_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END MotherTongue_fieldheadercolumn}{BEGIN Religion_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END Religion_fieldheadercolumn}{BEGIN SocialClass_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SocialClass_fieldheadercolumn}{BEGIN Weight_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END Weight_fieldheadercolumn}{BEGIN Height_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END Height_fieldheadercolumn}{BEGIN BloodGroup_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END BloodGroup_fieldheadercolumn}{BEGIN HostelRequired_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END HostelRequired_fieldheadercolumn}{BEGIN BusRequired_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END BusRequired_fieldheadercolumn}{BEGIN SpecialCareRequired_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SpecialCareRequired_fieldheadercolumn}{BEGIN FatherOrGuardianName_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END FatherOrGuardianName_fieldheadercolumn}{BEGIN FatherOrGuardianOccupation_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END FatherOrGuardianOccupation_fieldheadercolumn}{BEGIN FatherOrGuardianQualification_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END FatherOrGuardianQualification_fieldheadercolumn}{BEGIN AddressLine1_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END AddressLine1_fieldheadercolumn}{BEGIN AddressLine2_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END AddressLine2_fieldheadercolumn}{BEGIN CityOrLocation_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END CityOrLocation_fieldheadercolumn}{BEGIN PINCode_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END PINCode_fieldheadercolumn}{BEGIN FatherOrGuardianMobileNumber_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END FatherOrGuardianMobileNumber_fieldheadercolumn}{BEGIN FatherOrGuardianEmailID_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END FatherOrGuardianEmailID_fieldheadercolumn}{BEGIN LandlineNumber_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END LandlineNumber_fieldheadercolumn}{BEGIN AddressProof_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END AddressProof_fieldheadercolumn}{BEGIN AddressProofScan_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END AddressProofScan_fieldheadercolumn}{BEGIN IdentityProof_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END IdentityProof_fieldheadercolumn}{BEGIN IdentityProofScan_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END IdentityProofScan_fieldheadercolumn}{BEGIN MotherName_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END MotherName_fieldheadercolumn}{BEGIN MotherOccupation_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END MotherOccupation_fieldheadercolumn}{BEGIN MotherQualification_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END MotherQualification_fieldheadercolumn}{BEGIN MotherMobileNumber_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END MotherMobileNumber_fieldheadercolumn}{BEGIN MotherEmailID_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END MotherEmailID_fieldheadercolumn}{BEGIN PrevSchoolName_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END PrevSchoolName_fieldheadercolumn}{BEGIN SchoolAddressLine1_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SchoolAddressLine1_fieldheadercolumn}{BEGIN SchoolAddressLine2_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SchoolAddressLine2_fieldheadercolumn}{BEGIN SchoolCityOrLocationOrTownOrVillage_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SchoolCityOrLocationOrTownOrVillage_fieldheadercolumn}{BEGIN SchoolPINCode_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SchoolPINCode_fieldheadercolumn}{BEGIN SchoolStateOrProvince_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SchoolStateOrProvince_fieldheadercolumn}{BEGIN SchoolCountry_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SchoolCountry_fieldheadercolumn}{BEGIN SchoolPhoneNumber_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SchoolPhoneNumber_fieldheadercolumn}{BEGIN SchoolEmailID_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SchoolEmailID_fieldheadercolumn}{BEGIN Board_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END Board_fieldheadercolumn}{BEGIN LastClassPassedOrAttained_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END LastClassPassedOrAttained_fieldheadercolumn}{BEGIN PercentageInLastExam_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END PercentageInLastExam_fieldheadercolumn}{BEGIN DetailsMarks_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END DetailsMarks_fieldheadercolumn}{BEGIN MarkSheet_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END MarkSheet_fieldheadercolumn}{BEGIN TransferCertificate_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END TransferCertificate_fieldheadercolumn}{BEGIN CauseOfTransfer_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END CauseOfTransfer_fieldheadercolumn}{BEGIN SignatureOfApplicationRecipient_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SignatureOfApplicationRecipient_fieldheadercolumn}{BEGIN SignatureOfPrincipal_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END SignatureOfPrincipal_fieldheadercolumn}{BEGIN Year_fieldheadercolumn}<TD class="runner-cc runner-clast"></TD>
+          {END Year_fieldheadercolumn}<TD class="runner-cc runner-clast">
+            </TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD>
+          {BEGIN endrecordfooter_block}<TD class=runner-cs></TD>{END endrecordfooter_block}{END record_footer}</TR>{END grid_footer}</TBODY></TABLE>{END grid_block}{END container_grid}
+      {BEGIN container_pagination}
+      <TABLE class="runner-c runner-c-pagination" cellPadding=0>
+        <TBODY>
+        <TR class="{$cheaderclass_pagination}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1">
+          <TD class=runner-cl></TD>
+          <TD class=runner-cc>
+            <TABLE class=runner-hc cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                {BEGIN pagination_block}<TD class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}>
+                  <SPAN>{$pagination}</SPAN></TD>{END pagination_block}</TR></TBODY></TABLE></TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_pagination}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_pagination}</TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer>
+    <TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TBODY></TABLE>{$footer}{END body} </BODY></HTML>
