@@ -30,6 +30,38 @@
 				<td class="runner-top" colspan=3>
 					
 
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfo" {$brickclass_masterinfo}><span>{$showmasterfile}
+<a class="runner-link" {$backtomasterlink_attrs}>
+	<b>Back to {$backtomasterlink_caption}</b>
+</a></span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
 
 
 {BEGIN container_toplinks}
@@ -81,6 +113,35 @@
 
 
 <td class="runner-cc filler"></td>
+{BEGIN security_block}
+<td  class="runner-cc runner-br runner-b-loggedas" {$brickclass_loggedas}><span>{BEGIN loggedas_message} 
+<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>Log out</a>
+</span>
+{END logoutbutton}
+{BEGIN adminarea_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="admin_rights_list.php" class="runner-button" {$adminarealink_attrs}>Admin Area</a>
+	</span>
+{END adminarea_link}
+
+</span></td>
+{END security_block}
+
 
 
 </tr>
@@ -335,45 +396,25 @@
 									</th>
 									{END checkbox_column}
 
-																										{BEGIN ID_fieldheadercolumn}
+																										{BEGIN BookTitle_fieldheadercolumn}
 									<th class="runner-cc ">
-									{BEGIN ID_fieldheader}
-																				<a {$ID_orderlinkattrs}>
-											ID
+									{BEGIN BookTitle_fieldheader}
+																				<a {$BookTitle_orderlinkattrs}>
+											Book Title
 										</a>
-									{END ID_fieldheader}
+									{END BookTitle_fieldheader}
 									</th>
-									{END ID_fieldheadercolumn}
-
-																	{BEGIN BookID_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN BookID_fieldheader}
-																				<a {$BookID_orderlinkattrs}>
-											Book ID
-										</a>
-									{END BookID_fieldheader}
-									</th>
-									{END BookID_fieldheadercolumn}
+									{END BookTitle_fieldheadercolumn}
 
 																	{BEGIN StudentID_fieldheadercolumn}
 									<th class="runner-cc ">
 									{BEGIN StudentID_fieldheader}
 																				<a {$StudentID_orderlinkattrs}>
-											Student ID
+											Student
 										</a>
 									{END StudentID_fieldheader}
 									</th>
 									{END StudentID_fieldheadercolumn}
-
-																	{BEGIN AcademicYearID_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN AcademicYearID_fieldheader}
-																				<a {$AcademicYearID_orderlinkattrs}>
-											Academic Year ID
-										</a>
-									{END AcademicYearID_fieldheader}
-									</th>
-									{END AcademicYearID_fieldheadercolumn}
 
 																	{BEGIN TakenOn_fieldheadercolumn}
 									<th class="runner-cc ">
@@ -482,29 +523,17 @@
 									{END checkbox_column}
 
 
-										{BEGIN ID_fieldcolumn}
-	<td class="runner-cc  {$ID_class}" {$ID_style}>
-		{$ID_value}
+										{BEGIN BookTitle_fieldcolumn}
+	<td class="runner-cc  {$BookTitle_class}" {$BookTitle_style}>
+		{$BookTitle_value}
 	</td>
-{END ID_fieldcolumn}
-
-	{BEGIN BookID_fieldcolumn}
-	<td class="runner-cc  {$BookID_class}" {$BookID_style}>
-		{$BookID_value}
-	</td>
-{END BookID_fieldcolumn}
+{END BookTitle_fieldcolumn}
 
 	{BEGIN StudentID_fieldcolumn}
 	<td class="runner-cc  {$StudentID_class}" {$StudentID_style}>
 		{$StudentID_value}
 	</td>
 {END StudentID_fieldcolumn}
-
-	{BEGIN AcademicYearID_fieldcolumn}
-	<td class="runner-cc  {$AcademicYearID_class}" {$AcademicYearID_style}>
-		{$AcademicYearID_value}
-	</td>
-{END AcademicYearID_fieldcolumn}
 
 	{BEGIN TakenOn_fieldcolumn}
 	<td class="runner-cc  {$TakenOn_class}" {$TakenOn_style}>
@@ -565,18 +594,12 @@
 									{END checkbox_column}
 
 
-									{BEGIN ID_fieldheadercolumn}
+									{BEGIN BookTitle_fieldheadercolumn}
 <td class="runner-cc "></td>
-{END ID_fieldheadercolumn}
-{BEGIN BookID_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END BookID_fieldheadercolumn}
+{END BookTitle_fieldheadercolumn}
 {BEGIN StudentID_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END StudentID_fieldheadercolumn}
-{BEGIN AcademicYearID_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END AcademicYearID_fieldheadercolumn}
 {BEGIN TakenOn_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END TakenOn_fieldheadercolumn}

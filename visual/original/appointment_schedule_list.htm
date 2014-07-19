@@ -58,6 +58,35 @@
 
 
 <td class="runner-cc filler"></td>
+{BEGIN security_block}
+<td  class="runner-cc runner-br runner-b-loggedas" {$brickclass_loggedas}><span>{BEGIN loggedas_message} 
+<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>Log out</a>
+</span>
+{END logoutbutton}
+{BEGIN adminarea_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="admin_rights_list.php" class="runner-button" {$adminarealink_attrs}>Admin Area</a>
+	</span>
+{END adminarea_link}
+
+</span></td>
+{END security_block}
+
 
 
 </tr>
@@ -355,15 +384,7 @@
 										</tr>
 										{END grid_recordheader}
 										
-											{BEGIN ID_fieldcolumn}
-<tr class="runner-row style1">
-	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">ID</td>
-	<td class="runner-cc alt runner-cc2 {$ID_class}" {$ID_style}>{$ID_value}&nbsp;</td>
-	<td class="runner-cr alt"></td>
-</tr>
-{END ID_fieldcolumn}
-	{BEGIN RequestedBy_fieldcolumn}
+											{BEGIN RequestedBy_fieldcolumn}
 <tr class="runner-row style1">
 	<td class="runner-cl"></td>
 	<td class="runner-cc runner-cc1">Requested By</td>
@@ -382,7 +403,7 @@
 	{BEGIN DateAndTime_fieldcolumn}
 <tr class="runner-row style1">
 	<td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Date And Time</td>
+	<td class="runner-cc runner-cc1">Date & Time</td>
 	<td class="runner-cc alt runner-cc2 {$DateAndTime_class}" {$DateAndTime_style}>{$DateAndTime_value}&nbsp;</td>
 	<td class="runner-cr alt"></td>
 </tr>

@@ -10,7 +10,30 @@
         <TR class="runner-row style1"><TD class=runner-cl></TD>
           <TD class=runner-cc><TABLE class=runner-hc cellPadding=0 border=0><TR>{BEGIN asearch_link}<TD class="runner-cc runner-bl runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><SPAN><SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$advsearchlink_attrs}>Advanced 
                   search</A> </SPAN></SPAN></TD>
-                {END asearch_link}<TD class="runner-cc filler"></TD></TR></TABLE></TD>
+                {END asearch_link}<TD class="runner-cc filler"></TD>{BEGIN security_block}<td  class="runner-cc runner-br runner-b-loggedas" {$brickclass_loggedas}><span>{BEGIN loggedas_message}<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}<span class="runner-btnframe"><span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}<span class="runner-btnframe"><span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>Log out</a>
+</span>
+{END logoutbutton}
+{BEGIN adminarea_link}<span class="runner-btnframe"><span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="admin_rights_list.php" class="runner-button" {$adminarealink_attrs}>Admin Area</a>
+	</span>
+{END adminarea_link}
+
+</span></td>
+{END security_block}
+
+
+
+</TR></TABLE></TD>
           <TD class=runner-cr></TD></TR>
         <TR class="{$cfooterclass_toplinks}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>
           <TD class=runner-cc></TD>
@@ -97,12 +120,7 @@
 										</tr>
 										{END grid_recordheader}
 										
-											{BEGIN ID_fieldcolumn}<tr class="runner-row style1"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">ID</td>
-	<td class="runner-cc alt runner-cc2 {$ID_class}" {$ID_style}>{$ID_value}&nbsp;</td><td class="runner-cr alt"></td>
-</tr>
-          {END ID_fieldcolumn}
-	{BEGIN RequestedBy_fieldcolumn}<tr class="runner-row style1"><td class="runner-cl"></td>
+											{BEGIN RequestedBy_fieldcolumn}<tr class="runner-row style1"><td class="runner-cl"></td>
 	<td class="runner-cc runner-cc1">Requested By</td>
 	<td class="runner-cc alt runner-cc2 {$RequestedBy_class}" {$RequestedBy_style}>{$RequestedBy_value}&nbsp;</td><td class="runner-cr alt"></td>
 </tr>
@@ -113,7 +131,7 @@
 </tr>
           {END AppointmentWith_fieldcolumn}
 	{BEGIN DateAndTime_fieldcolumn}<tr class="runner-row style1"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">Date And Time</td>
+	<td class="runner-cc runner-cc1">Date & Time</td>
 	<td class="runner-cc alt runner-cc2 {$DateAndTime_class}" {$DateAndTime_style}>{$DateAndTime_value}&nbsp;</td><td class="runner-cr alt"></td>
 </tr>
           {END DateAndTime_fieldcolumn}

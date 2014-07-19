@@ -58,6 +58,35 @@
 
 
 <td class="runner-cc filler"></td>
+{BEGIN security_block}
+<td  class="runner-cc runner-br runner-b-loggedas" {$brickclass_loggedas}><span>{BEGIN loggedas_message} 
+<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>Log out</a>
+</span>
+{END logoutbutton}
+{BEGIN adminarea_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="admin_rights_list.php" class="runner-button" {$adminarealink_attrs}>Admin Area</a>
+	</span>
+{END adminarea_link}
+
+</span></td>
+{END security_block}
+
 
 
 </tr>
@@ -333,17 +362,7 @@
 									</th>
 									{END checkbox_column}
 
-																										{BEGIN ID_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN ID_fieldheader}
-																				<a {$ID_orderlinkattrs}>
-											ID
-										</a>
-									{END ID_fieldheader}
-									</th>
-									{END ID_fieldheadercolumn}
-
-																	{BEGIN Bank_fieldheadercolumn}
+																										{BEGIN Bank_fieldheadercolumn}
 									<th class="runner-cc ">
 									{BEGIN Bank_fieldheader}
 																				<a {$Bank_orderlinkattrs}>
@@ -405,13 +424,7 @@
 									{END checkbox_column}
 
 
-										{BEGIN ID_fieldcolumn}
-	<td class="runner-cc  {$ID_class}" {$ID_style}>
-		{$ID_value}
-	</td>
-{END ID_fieldcolumn}
-
-	{BEGIN Bank_fieldcolumn}
+										{BEGIN Bank_fieldcolumn}
 	<td class="runner-cc  {$Bank_class}" {$Bank_style}>
 		{$Bank_value}
 	</td>
@@ -446,10 +459,7 @@
 									{END checkbox_column}
 
 
-									{BEGIN ID_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END ID_fieldheadercolumn}
-{BEGIN Bank_fieldheadercolumn}
+									{BEGIN Bank_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END Bank_fieldheadercolumn}
 {BEGIN Branch_fieldheadercolumn}
