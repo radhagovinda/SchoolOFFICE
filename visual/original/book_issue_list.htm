@@ -396,7 +396,37 @@
 									</th>
 									{END checkbox_column}
 
-																										{BEGIN BookTitle_fieldheadercolumn}
+																										{BEGIN ReturnedOn_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN ReturnedOn_fieldheader}
+																				<a {$ReturnedOn_orderlinkattrs}>
+											Returned On
+										</a>
+									{END ReturnedOn_fieldheader}
+									</th>
+									{END ReturnedOn_fieldheadercolumn}
+
+																	{BEGIN LateBy_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN LateBy_fieldheader}
+																				<a {$LateBy_orderlinkattrs}>
+											Late By
+										</a>
+									{END LateBy_fieldheader}
+									</th>
+									{END LateBy_fieldheadercolumn}
+
+																	{BEGIN LateFine_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN LateFine_fieldheader}
+																				<a {$LateFine_orderlinkattrs}>
+											Late Fine
+										</a>
+									{END LateFine_fieldheader}
+									</th>
+									{END LateFine_fieldheadercolumn}
+
+																	{BEGIN BookTitle_fieldheadercolumn}
 									<th class="runner-cc ">
 									{BEGIN BookTitle_fieldheader}
 																				<a {$BookTitle_orderlinkattrs}>
@@ -435,36 +465,6 @@
 									{END ToReturnOn_fieldheader}
 									</th>
 									{END ToReturnOn_fieldheadercolumn}
-
-																	{BEGIN ReturnedOn_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN ReturnedOn_fieldheader}
-																				<a {$ReturnedOn_orderlinkattrs}>
-											Returned On
-										</a>
-									{END ReturnedOn_fieldheader}
-									</th>
-									{END ReturnedOn_fieldheadercolumn}
-
-																	{BEGIN LateBy_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN LateBy_fieldheader}
-																				<a {$LateBy_orderlinkattrs}>
-											Late By
-										</a>
-									{END LateBy_fieldheader}
-									</th>
-									{END LateBy_fieldheadercolumn}
-
-																	{BEGIN LateFine_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN LateFine_fieldheader}
-																				<a {$LateFine_orderlinkattrs}>
-											Late Fine
-										</a>
-									{END LateFine_fieldheader}
-									</th>
-									{END LateFine_fieldheadercolumn}
 
 																	{BEGIN IssuedByStaff_fieldheadercolumn}
 									<th class="runner-cc runner-clast">
@@ -523,7 +523,25 @@
 									{END checkbox_column}
 
 
-										{BEGIN BookTitle_fieldcolumn}
+										{BEGIN ReturnedOn_fieldcolumn}
+	<td class="runner-cc  {$ReturnedOn_class}" {$ReturnedOn_style}>
+		{$ReturnedOn_value}
+	</td>
+{END ReturnedOn_fieldcolumn}
+
+	{BEGIN LateBy_fieldcolumn}
+	<td class="runner-cc  {$LateBy_class}" {$LateBy_style}>
+		{$LateBy_value}
+	</td>
+{END LateBy_fieldcolumn}
+
+	{BEGIN LateFine_fieldcolumn}
+	<td class="runner-cc  {$LateFine_class}" {$LateFine_style}>
+		{$LateFine_value}
+	</td>
+{END LateFine_fieldcolumn}
+
+	{BEGIN BookTitle_fieldcolumn}
 	<td class="runner-cc  {$BookTitle_class}" {$BookTitle_style}>
 		{$BookTitle_value}
 	</td>
@@ -546,24 +564,6 @@
 		{$ToReturnOn_value}
 	</td>
 {END ToReturnOn_fieldcolumn}
-
-	{BEGIN ReturnedOn_fieldcolumn}
-	<td class="runner-cc  {$ReturnedOn_class}" {$ReturnedOn_style}>
-		{$ReturnedOn_value}
-	</td>
-{END ReturnedOn_fieldcolumn}
-
-	{BEGIN LateBy_fieldcolumn}
-	<td class="runner-cc  {$LateBy_class}" {$LateBy_style}>
-		{$LateBy_value}
-	</td>
-{END LateBy_fieldcolumn}
-
-	{BEGIN LateFine_fieldcolumn}
-	<td class="runner-cc  {$LateFine_class}" {$LateFine_style}>
-		{$LateFine_value}
-	</td>
-{END LateFine_fieldcolumn}
 
 	{BEGIN IssuedByStaff_fieldcolumn}
 	<td class="runner-cc runner-clast {$IssuedByStaff_class}" {$IssuedByStaff_style}>
@@ -594,7 +594,16 @@
 									{END checkbox_column}
 
 
-									{BEGIN BookTitle_fieldheadercolumn}
+									{BEGIN ReturnedOn_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END ReturnedOn_fieldheadercolumn}
+{BEGIN LateBy_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END LateBy_fieldheadercolumn}
+{BEGIN LateFine_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END LateFine_fieldheadercolumn}
+{BEGIN BookTitle_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END BookTitle_fieldheadercolumn}
 {BEGIN StudentID_fieldheadercolumn}
@@ -606,15 +615,6 @@
 {BEGIN ToReturnOn_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END ToReturnOn_fieldheadercolumn}
-{BEGIN ReturnedOn_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END ReturnedOn_fieldheadercolumn}
-{BEGIN LateBy_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END LateBy_fieldheadercolumn}
-{BEGIN LateFine_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END LateFine_fieldheadercolumn}
 {BEGIN IssuedByStaff_fieldheadercolumn}
 <td class="runner-cc runner-clast"></td>
 {END IssuedByStaff_fieldheadercolumn}

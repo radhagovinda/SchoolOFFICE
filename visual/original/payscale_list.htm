@@ -394,17 +394,7 @@
 									</th>
 									{END checkbox_column}
 
-																										{BEGIN FinancialYear_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN FinancialYear_fieldheader}
-																				<a {$FinancialYear_orderlinkattrs}>
-											Financial Year
-										</a>
-									{END FinancialYear_fieldheader}
-									</th>
-									{END FinancialYear_fieldheadercolumn}
-
-																	{BEGIN StaffRoleID_fieldheadercolumn}
+																										{BEGIN StaffRoleID_fieldheadercolumn}
 									<th class="runner-cc ">
 									{BEGIN StaffRoleID_fieldheader}
 																				<a {$StaffRoleID_orderlinkattrs}>
@@ -413,6 +403,16 @@
 									{END StaffRoleID_fieldheader}
 									</th>
 									{END StaffRoleID_fieldheadercolumn}
+
+																	{BEGIN FinancialYear_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN FinancialYear_fieldheader}
+																				<a {$FinancialYear_orderlinkattrs}>
+											Financial Year
+										</a>
+									{END FinancialYear_fieldheader}
+									</th>
+									{END FinancialYear_fieldheadercolumn}
 
 																	{BEGIN Head_fieldheadercolumn}
 									<th class="runner-cc ">
@@ -511,17 +511,17 @@
 									{END checkbox_column}
 
 
-										{BEGIN FinancialYear_fieldcolumn}
-	<td class="runner-cc  {$FinancialYear_class}" {$FinancialYear_style}>
-		{$FinancialYear_value}
-	</td>
-{END FinancialYear_fieldcolumn}
-
-	{BEGIN StaffRoleID_fieldcolumn}
+										{BEGIN StaffRoleID_fieldcolumn}
 	<td class="runner-cc  {$StaffRoleID_class}" {$StaffRoleID_style}>
 		{$StaffRoleID_value}
 	</td>
 {END StaffRoleID_fieldcolumn}
+
+	{BEGIN FinancialYear_fieldcolumn}
+	<td class="runner-cc  {$FinancialYear_class}" {$FinancialYear_style}>
+		{$FinancialYear_value}
+	</td>
+{END FinancialYear_fieldcolumn}
 
 	{BEGIN Head_fieldcolumn}
 	<td class="runner-cc  {$Head_class}" {$Head_style}>
@@ -576,12 +576,12 @@
 									{END checkbox_column}
 
 
-									{BEGIN FinancialYear_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END FinancialYear_fieldheadercolumn}
-{BEGIN StaffRoleID_fieldheadercolumn}
+									{BEGIN StaffRoleID_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END StaffRoleID_fieldheadercolumn}
+{BEGIN FinancialYear_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END FinancialYear_fieldheadercolumn}
 {BEGIN Head_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END Head_fieldheadercolumn}

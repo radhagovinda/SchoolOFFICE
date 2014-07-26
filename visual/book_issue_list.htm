@@ -120,7 +120,16 @@
           {BEGIN listIcons_column}<TH class=runner-cc iEditCont="all"></TH>
           {END listIcons_column}{BEGIN checkbox_column}<TH class="runner-cc runner-bc"><INPUT type=checkbox 
             {$checkboxheader_attrs}></TH>
-          {END checkbox_column}{BEGIN BookTitle_fieldheadercolumn}<th class="runner-cc ">{BEGIN BookTitle_fieldheader}<a {$BookTitle_orderlinkattrs}>
+          {END checkbox_column}{BEGIN ReturnedOn_fieldheadercolumn}<TH class="runner-cc ">{BEGIN ReturnedOn_fieldheader}<A {$ReturnedOn_orderlinkattrs}>Returned On </A>{END ReturnedOn_fieldheader}</TH>
+          {END ReturnedOn_fieldheadercolumn}
+
+																	{BEGIN LateBy_fieldheadercolumn}<TH class="runner-cc ">{BEGIN LateBy_fieldheader}<A {$LateBy_orderlinkattrs}>Late By </A>{END LateBy_fieldheader}</TH>
+          {END LateBy_fieldheadercolumn}
+
+																	{BEGIN LateFine_fieldheadercolumn}<TH class="runner-cc ">{BEGIN LateFine_fieldheader}<A {$LateFine_orderlinkattrs}>Late Fine </A>{END LateFine_fieldheader}</TH>
+          {END LateFine_fieldheadercolumn}
+
+																	{BEGIN BookTitle_fieldheadercolumn}<th class="runner-cc ">{BEGIN BookTitle_fieldheader}<a {$BookTitle_orderlinkattrs}>
 											Book Title
 										</a>
 									{END BookTitle_fieldheader}
@@ -130,37 +139,43 @@
 										</A>{END StudentID_fieldheader}</TH>
           {END StudentID_fieldheadercolumn}{BEGIN TakenOn_fieldheadercolumn}<TH class="runner-cc ">{BEGIN TakenOn_fieldheader}<A {$TakenOn_orderlinkattrs}>Taken On </A>{END TakenOn_fieldheader}</TH>
           {END TakenOn_fieldheadercolumn}{BEGIN ToReturnOn_fieldheadercolumn}<TH class="runner-cc ">{BEGIN ToReturnOn_fieldheader}<A {$ToReturnOn_orderlinkattrs}>To Return On </A>{END ToReturnOn_fieldheader}</TH>
-          {END ToReturnOn_fieldheadercolumn}{BEGIN ReturnedOn_fieldheadercolumn}<TH class="runner-cc ">{BEGIN ReturnedOn_fieldheader}<A {$ReturnedOn_orderlinkattrs}>Returned On </A>{END ReturnedOn_fieldheader}</TH>
-          {END ReturnedOn_fieldheadercolumn}{BEGIN LateBy_fieldheadercolumn}<TH class="runner-cc ">{BEGIN LateBy_fieldheader}<A {$LateBy_orderlinkattrs}>Late By </A>{END LateBy_fieldheader}</TH>
-          {END LateBy_fieldheadercolumn}{BEGIN LateFine_fieldheadercolumn}<TH class="runner-cc ">{BEGIN LateFine_fieldheader}<A {$LateFine_orderlinkattrs}>Late Fine </A>{END LateFine_fieldheader}</TH>
-          {END LateFine_fieldheadercolumn}{BEGIN IssuedByStaff_fieldheadercolumn}<TH class="runner-cc runner-clast">{BEGIN IssuedByStaff_fieldheader}<A {$IssuedByStaff_orderlinkattrs}>Issued By Staff </A>{END IssuedByStaff_fieldheader}</TH>
+          {END ToReturnOn_fieldheadercolumn}{BEGIN IssuedByStaff_fieldheadercolumn}<TH class="runner-cc runner-clast">{BEGIN IssuedByStaff_fieldheader}<A {$IssuedByStaff_orderlinkattrs}>Issued By Staff </A>{END IssuedByStaff_fieldheader}</TH>
           {END IssuedByStaff_fieldheadercolumn}<TH class=runner-cr><IMG src="images/spacer.gif"></TH>
           {BEGIN endrecordheader_block}<TH class=runner-cs></TH>{END endrecordheader_block}{END record_header}</TR>{END grid_header}</THEAD>
         {BEGIN grid_row}<TR class="runner-row style1 {$rowclass}" {$rowstyle} {$rowattrs}>{BEGIN grid_record}<TD class=runner-cl {$rowstyle}></TD>
           {BEGIN listIcons_column}<TD class="runner-cc runner-bc runner-icons" iEditCont="all" {$rowstyle}>{BEGIN edit_column}{BEGIN edit_link}<A title=Edit class=runner-button-img {$editlink_attrs}><IMG class=runner-cicon alt=Edit src="images/icon_edit_new.gif"></A> {END edit_link}{END edit_column}{BEGIN view_column}{BEGIN view_link}<A title=View class=runner-button-img {$viewlink_attrs}><IMG class=runner-cicon alt=View src="images/icon_view_new.gif"></A>{END view_link}{END view_column}</TD>
           {END listIcons_column}{BEGIN checkbox_column}<TD class="runner-cc runner-bc" iEditCont="checkBox" {$rowstyle}>{BEGIN checkbox}<INPUT type=checkbox {$checkbox_attrs}>{END checkbox}</TD>
-          {END checkbox_column}{BEGIN BookTitle_fieldcolumn}<td class="runner-cc  {$BookTitle_class}" {$BookTitle_style}>{$BookTitle_value}
+          {END checkbox_column}{BEGIN ReturnedOn_fieldcolumn}<TD class="runner-cc  {$ReturnedOn_class}" {$ReturnedOn_style}>{$ReturnedOn_value}</TD>
+          {END ReturnedOn_fieldcolumn}
+
+	{BEGIN LateBy_fieldcolumn}<TD class="runner-cc  {$LateBy_class}" {$LateBy_style}>{$LateBy_value}</TD>
+          {END LateBy_fieldcolumn}
+
+	{BEGIN LateFine_fieldcolumn}<TD class="runner-cc  {$LateFine_class}" {$LateFine_style}>{$LateFine_value}</TD>
+          {END LateFine_fieldcolumn}
+
+	{BEGIN BookTitle_fieldcolumn}<td class="runner-cc  {$BookTitle_class}" {$BookTitle_style}>{$BookTitle_value}
 	</td>
 {END BookTitle_fieldcolumn}{BEGIN StudentID_fieldcolumn}<TD class="runner-cc  {$StudentID_class}" {$StudentID_style}>{$StudentID_value}</TD>
           {END StudentID_fieldcolumn}{BEGIN TakenOn_fieldcolumn}<TD class="runner-cc  {$TakenOn_class}" {$TakenOn_style}>{$TakenOn_value}</TD>
           {END TakenOn_fieldcolumn}{BEGIN ToReturnOn_fieldcolumn}<TD class="runner-cc  {$ToReturnOn_class}" {$ToReturnOn_style}>{$ToReturnOn_value}</TD>
-          {END ToReturnOn_fieldcolumn}{BEGIN ReturnedOn_fieldcolumn}<TD class="runner-cc  {$ReturnedOn_class}" {$ReturnedOn_style}>{$ReturnedOn_value}</TD>
-          {END ReturnedOn_fieldcolumn}{BEGIN LateBy_fieldcolumn}<TD class="runner-cc  {$LateBy_class}" {$LateBy_style}>{$LateBy_value}</TD>
-          {END LateBy_fieldcolumn}{BEGIN LateFine_fieldcolumn}<TD class="runner-cc  {$LateFine_class}" {$LateFine_style}>{$LateFine_value}</TD>
-          {END LateFine_fieldcolumn}{BEGIN IssuedByStaff_fieldcolumn}<TD class="runner-cc runner-clast {$IssuedByStaff_class}" {$IssuedByStaff_style}>{$IssuedByStaff_value}</TD>
+          {END ToReturnOn_fieldcolumn}{BEGIN IssuedByStaff_fieldcolumn}<TD class="runner-cc runner-clast {$IssuedByStaff_class}" {$IssuedByStaff_style}>{$IssuedByStaff_value}</TD>
           {END IssuedByStaff_fieldcolumn}<TD class=runner-cr {$rowstyle}></TD>
           {BEGIN endrecord_block}<TD class=runner-cs {$endrecordblock_attrs}></TD>{END endrecord_block}{END grid_record}</TR>
         {END grid_row}{BEGIN grid_footer}<TR class="runner-bottomrow style1{$gridFooter_class}">{BEGIN record_footer}<TD class=runner-cl><IMG src="images/spacer.gif"></TD>
           {BEGIN listIcons_column}<TD class=runner-cc></TD>
           {END listIcons_column}{BEGIN checkbox_column}<TD class=runner-cc></TD>
-          {END checkbox_column}{BEGIN BookTitle_fieldheadercolumn}<td class="runner-cc "></td>
+          {END checkbox_column}{BEGIN ReturnedOn_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END ReturnedOn_fieldheadercolumn}
+{BEGIN LateBy_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END LateBy_fieldheadercolumn}
+{BEGIN LateFine_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END LateFine_fieldheadercolumn}
+{BEGIN BookTitle_fieldheadercolumn}<td class="runner-cc "></td>
 {END BookTitle_fieldheadercolumn}{BEGIN StudentID_fieldheadercolumn}<TD class="runner-cc "></TD>
           {END StudentID_fieldheadercolumn}{BEGIN TakenOn_fieldheadercolumn}<TD class="runner-cc "></TD>
           {END TakenOn_fieldheadercolumn}{BEGIN ToReturnOn_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END ToReturnOn_fieldheadercolumn}{BEGIN ReturnedOn_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END ReturnedOn_fieldheadercolumn}{BEGIN LateBy_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END LateBy_fieldheadercolumn}{BEGIN LateFine_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END LateFine_fieldheadercolumn}{BEGIN IssuedByStaff_fieldheadercolumn}<TD class="runner-cc runner-clast"></TD>
+          {END ToReturnOn_fieldheadercolumn}{BEGIN IssuedByStaff_fieldheadercolumn}<TD class="runner-cc runner-clast"></TD>
           {END IssuedByStaff_fieldheadercolumn}<TD class=runner-cr><IMG src="images/spacer.gif"></TD>
           {BEGIN endrecordfooter_block}<TD class=runner-cs></TD>{END endrecordfooter_block}{END record_footer}</TR>{END grid_footer}</TABLE>{END grid_block}{END container_grid}
       {BEGIN container_pagination}<TABLE class="runner-c runner-c-pagination" cellPadding=0><TR class="{$cheaderclass_pagination}"><TD class=runner-cl><IMG src="images/spacer.gif"></TD>

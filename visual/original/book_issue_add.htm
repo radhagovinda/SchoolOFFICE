@@ -56,7 +56,7 @@
 	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
 	<td class="runner-cc runner-cc1">
 		<div class="fieldlabel_BookID {$fielddispclass_BookID}">
-			{BEGIN BookID_label}Book ID{END BookID_label}
+			{BEGIN BookID_label}Book{END BookID_label}
 		</div>
 	</td>
 	<td class="runner-cc alt runner-fixedcell">
@@ -70,7 +70,7 @@
 	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
 	<td class="runner-cc runner-cc1">
 		<div class="fieldlabel_StudentID {$fielddispclass_StudentID}">
-			{BEGIN StudentID_label}Student ID{END StudentID_label}
+			{BEGIN StudentID_label}Student{END StudentID_label}
 		</div>
 	</td>
 	<td class="runner-cc alt runner-fixedcell">
@@ -80,11 +80,25 @@
 	</td>
 	<td class="runner-cr alt"></td></tr>
 {END StudentID_fieldblock}
+	{BEGIN AcademicYear_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_AcademicYear {$fielddispclass_AcademicYear}">
+			{BEGIN AcademicYear_label}Academic Year{END AcademicYear_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_AcademicYear {$fielddispclass_AcademicYear}">
+			{$AcademicYear_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END AcademicYear_fieldblock}
 	{BEGIN AcademicYearID_fieldblock}
 	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
 	<td class="runner-cc runner-cc1">
 		<div class="fieldlabel_AcademicYearID {$fielddispclass_AcademicYearID}">
-			{BEGIN AcademicYearID_label}Academic Year ID{END AcademicYearID_label}
+			{BEGIN AcademicYearID_label}Academic Year{END AcademicYearID_label}
 		</div>
 	</td>
 	<td class="runner-cc alt runner-fixedcell">
@@ -122,48 +136,6 @@
 	</td>
 	<td class="runner-cr alt"></td></tr>
 {END ToReturnOn_fieldblock}
-	{BEGIN ReturnedOn_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_ReturnedOn {$fielddispclass_ReturnedOn}">
-			{BEGIN ReturnedOn_label}Returned On{END ReturnedOn_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_ReturnedOn {$fielddispclass_ReturnedOn}">
-			{$ReturnedOn_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END ReturnedOn_fieldblock}
-	{BEGIN LateBy_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_LateBy {$fielddispclass_LateBy}">
-			{BEGIN LateBy_label}Late By{END LateBy_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_LateBy {$fielddispclass_LateBy}">
-			{$LateBy_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END LateBy_fieldblock}
-	{BEGIN LateFine_fieldblock}
-	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
-	<td class="runner-cc runner-cc1">
-		<div class="fieldlabel_LateFine {$fielddispclass_LateFine}">
-			{BEGIN LateFine_label}Late Fine{END LateFine_label}
-		</div>
-	</td>
-	<td class="runner-cc alt runner-fixedcell">
-		<div class="fieldcontrol_LateFine {$fielddispclass_LateFine}">
-			{$LateFine_editcontrol}&nbsp;
-		</div>
-	</td>
-	<td class="runner-cr alt"></td></tr>
-{END LateFine_fieldblock}
 	{BEGIN IssuedByStaff_fieldblock}
 	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
 	<td class="runner-cc runner-cc1">

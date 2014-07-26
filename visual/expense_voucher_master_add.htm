@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16385"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE class=runner-toptable cellPadding=0>
+  <TBODY>
+  <TR class=runner-header>
+    <TD class=runner-top colSpan=3>
+      {BEGIN container_add}
+      <TABLE class="runner-c runner-c-add" cellPadding=0 align=center>
+        <TBODY>
+        <TR class="runner-toprow style2 header">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc>
+            
+            <DIV class="runner-b-addheader {$brickclass_addheader}">Expense 
+            Voucher Master, Add new record</DIV></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        {BEGIN message_block}<TR class="runner-row style1 runner-b-message {$brickclass_message}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents">
+            
+            <DIV class=runner-message>{$message}</DIV></TD>
+          <TD class=runner-cr></TD></TR>
+        {END message_block}<TR class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents runner-wrapper">
+            
+            {BEGIN container_fields}
+            <TABLE class="runner-c runner-c-fields" cellPadding=0>
+              <TBODY>
+              <TR class="{$cheaderclass_fields}">
+                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class="runner-cc alt"></TD>
+                <TD class="runner-cc alt"></TD>
+                <TD class="runner-cc alt"></TD>
+                <TD class="runner-cr alt"><IMG src="images/spacer.gif"></TD></TR>
+              {BEGIN Date_fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_Date {$fielddispclass_Date}" align=right>{BEGIN Date_label}Date {END Date_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV class="fieldcontrol_Date {$fielddispclass_Date}">{$Date_editcontrol}&nbsp; </DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  </TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  </TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Date_fieldblock}{BEGIN ExpenseFromFund_fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_ExpenseFromFund {$fielddispclass_ExpenseFromFund}" align=right>{BEGIN ExpenseFromFund_label}Expense From Fund {END ExpenseFromFund_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV 
+                  class="fieldcontrol_ExpenseFromFund {$fielddispclass_ExpenseFromFund}">{$ExpenseFromFund_editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV class="fieldlabel_ExpenseHead {$fielddispclass_ExpenseHead}" align=right>{BEGIN ExpenseHead_label}Expense Head {END ExpenseHead_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  {$ExpenseHead_editcontrol}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END ExpenseFromFund_fieldblock}{BEGIN Requisition__fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_Requisition_ {$fielddispclass_Requisition_}" align=right>{BEGIN Requisition__label}Requisition# {END Requisition__label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV 
+                  class="fieldcontrol_Requisition_ {$fielddispclass_Requisition_}">{$Requisition__editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <P align=right>Purchase Order#</P></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  {$PurchaseOrder__editcontrol}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Requisition__fieldblock}{BEGIN PurchaseOrder__fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_PurchaseOrder_ {$fielddispclass_PurchaseOrder_}" align=right>{BEGIN PurchaseOrder__label}&nbsp;{END PurchaseOrder__label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV 
+                  class="fieldcontrol_PurchaseOrder_ {$fielddispclass_PurchaseOrder_}"></DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  </TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  </TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END PurchaseOrder__fieldblock}{BEGIN PurchasedFrom_fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_PurchasedFrom {$fielddispclass_PurchasedFrom}" align=right>{BEGIN PurchasedFrom_label}Purchased From {END PurchasedFrom_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV 
+                  class="fieldcontrol_PurchasedFrom {$fielddispclass_PurchasedFrom}">{$PurchasedFrom_editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV class="fieldlabel_PaymentMode {$fielddispclass_PaymentMode}" align=right>{BEGIN PaymentMode_label}Payment Mode {END PaymentMode_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  {$PaymentMode_editcontrol}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END PurchasedFrom_fieldblock}{BEGIN PaymentMode_fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_PaymentMode {$fielddispclass_PaymentMode}" align=right>{BEGIN PaymentMode_label}&nbsp;{END PaymentMode_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV 
+                  class="fieldcontrol_PaymentMode {$fielddispclass_PaymentMode}"></DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  </TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  </TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END PaymentMode_fieldblock}{BEGIN Bank_fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_Bank {$fielddispclass_Bank}" align=right>{BEGIN Bank_label}Bank {END Bank_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV class="fieldcontrol_Bank {$fielddispclass_Bank}">{$Bank_editcontrol}&nbsp; </DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <P align=right>Account#</P></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  {$Account__editcontrol}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Bank_fieldblock}{BEGIN Check__fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_Check_ {$fielddispclass_Check_}" align=right>{BEGIN Check__label}Check# {END Check__label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV 
+                  class="fieldcontrol_Check_ {$fielddispclass_Check_}">{$Check__editcontrol}&nbsp; </DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV class="fieldlabel_CheckDate {$fielddispclass_CheckDate}" align=right>{BEGIN CheckDate_label}Check Date {END CheckDate_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  {$CheckDate_editcontrol}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Check__fieldblock}{BEGIN IfCleared_fieldblock}<TR class="runner-row style1 runner-b-addfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV class="fieldlabel_IfCleared {$fielddispclass_IfCleared}" align=right>{BEGIN IfCleared_label}If Cleared {END IfCleared_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV 
+                  class="fieldcontrol_IfCleared {$fielddispclass_IfCleared}">{$IfCleared_editcontrol}&nbsp; 
+                  </DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  
+                  <DIV class="fieldlabel_ClearedOn {$fielddispclass_ClearedOn}" align=right>{BEGIN ClearedOn_label}Cleared On {END ClearedOn_label}</DIV></TD>
+                <TD class="runner-cc alt runner-fixedcell">
+                  {$ClearedOn_editcontrol}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END IfCleared_fieldblock}{BEGIN legend}<TR class="runner-row style3 runner-b-legend {$brickclass_legend}">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-brickcontents" colSpan=4>
+                  <SPAN id=required_block{$id}><IMG alt=bullet src="images/icon_required.gif"> - Required field </SPAN>
+                  
+                  </TD>
+                <TD class=runner-cr></TD></TR>
+              {END legend}<TR 
+              class="runner-row style2 runner-b-addbuttons {$brickclass_addbuttons}">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-brickcontents" colSpan=4>
+                  {BEGIN save_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$savebutton_attrs}>Save and Add Expense Details Below</A> 
+                  </SPAN>{END save_button}{BEGIN cancel_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$cancelbutton_attrs}>Cancel</A> </SPAN>{END cancel_button}{BEGIN back_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$backbutton_attrs}>Back to list</A> </SPAN>{END back_button}{BEGIN backToMenu_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$backToMenubutton_attrs}>Back to menu</A> </SPAN>
+                  
+                  {END backToMenu_button}</TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="{$cfooterclass_fields}">
+                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_fields}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_add}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_add}</TD></TR>
+  <TR class=runner-body>
+    <TD class="runner-left {$blockclass_left}"></TD>
+    <TD class="runner-center {$blockclass_center}"></TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer>
+    <TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TBODY></TABLE>{$footer}{END body} </BODY></HTML>

@@ -143,11 +143,13 @@
           {BEGIN listIcons_column}<TH class=runner-cc iEditCont="all"></TH>
           {END listIcons_column}{BEGIN checkbox_column}<TH class="runner-cc runner-bc"><INPUT type=checkbox 
             {$checkboxheader_attrs}></TH>
-          {END checkbox_column}{BEGIN FinancialYear_fieldheadercolumn}<TH class="runner-cc ">{BEGIN FinancialYear_fieldheader}<A {$FinancialYear_orderlinkattrs}>Financial Year </A>{END FinancialYear_fieldheader}</TH>
-          {END FinancialYear_fieldheadercolumn}{BEGIN StaffRoleID_fieldheadercolumn}<TH class="runner-cc ">{BEGIN StaffRoleID_fieldheader}<A {$StaffRoleID_orderlinkattrs}>
+          {END checkbox_column}{BEGIN StaffRoleID_fieldheadercolumn}<TH class="runner-cc ">{BEGIN StaffRoleID_fieldheader}<A {$StaffRoleID_orderlinkattrs}>
 											Staff Role
 										</A>{END StaffRoleID_fieldheader}</TH>
-          {END StaffRoleID_fieldheadercolumn}{BEGIN Head_fieldheadercolumn}<TH class="runner-cc ">{BEGIN Head_fieldheader}<A {$Head_orderlinkattrs}>Head </A>{END Head_fieldheader}</TH>
+          {END StaffRoleID_fieldheadercolumn}
+
+																	{BEGIN FinancialYear_fieldheadercolumn}<TH class="runner-cc ">{BEGIN FinancialYear_fieldheader}<A {$FinancialYear_orderlinkattrs}>Financial Year </A>{END FinancialYear_fieldheader}</TH>
+          {END FinancialYear_fieldheadercolumn}{BEGIN Head_fieldheadercolumn}<TH class="runner-cc ">{BEGIN Head_fieldheader}<A {$Head_orderlinkattrs}>Head </A>{END Head_fieldheader}</TH>
           {END Head_fieldheadercolumn}{BEGIN AddOrDeduct_fieldheadercolumn}<TH class="runner-cc ">{BEGIN AddOrDeduct_fieldheader}<A {$AddOrDeduct_orderlinkattrs}>Add Or Deduct </A>{END AddOrDeduct_fieldheader}</TH>
           {END AddOrDeduct_fieldheadercolumn}{BEGIN FixedOrPercentage_fieldheadercolumn}<TH class="runner-cc ">{BEGIN FixedOrPercentage_fieldheader}<A {$FixedOrPercentage_orderlinkattrs}>Fixed Or Percentage 
 </A>{END FixedOrPercentage_fieldheader}</TH>
@@ -158,11 +160,13 @@
         {BEGIN grid_row}<TR class="runner-row style1 {$rowclass}" {$rowstyle} {$rowattrs}>{BEGIN grid_record}<TD class=runner-cl {$rowstyle}></TD>
           {BEGIN listIcons_column}<TD class="runner-cc runner-bc runner-icons" iEditCont="all" {$rowstyle}>{BEGIN inlineedit_column}{BEGIN inlineedit_link}<A title="Inline Edit" class=runner-button-img {$inlineeditlink_attrs}><IMG class=runner-cicon alt="Inline Edit" src="images/icon_inline_edit_new.gif"></A> {END inlineedit_link}{END inlineedit_column}{BEGIN view_column}{BEGIN view_link}<A title=View class=runner-button-img {$viewlink_attrs}><IMG class=runner-cicon alt=View src="images/icon_view_new.gif"></A>{END view_link}{END view_column}</TD>
           {END listIcons_column}{BEGIN checkbox_column}<TD class="runner-cc runner-bc" iEditCont="checkBox" {$rowstyle}>{BEGIN checkbox}<INPUT type=checkbox {$checkbox_attrs}>{END checkbox}</TD>
-          {END checkbox_column}{BEGIN FinancialYear_fieldcolumn}<TD class="runner-cc  {$FinancialYear_class}" {$FinancialYear_style}><P>{$FinancialYear_value}</P>
+          {END checkbox_column}{BEGIN StaffRoleID_fieldcolumn}<TD class="runner-cc  {$StaffRoleID_class}" {$StaffRoleID_style}>{$StaffRoleID_value}</TD>
+          {END StaffRoleID_fieldcolumn}
+
+	{BEGIN FinancialYear_fieldcolumn}<TD class="runner-cc  {$FinancialYear_class}" {$FinancialYear_style}><P>{$FinancialYear_value}</P>
             <P><FONT color=#ff0000 size=1>Current:</FONT> 
             {$event payscale_snippet1}</P></TD>
-          {END FinancialYear_fieldcolumn}{BEGIN StaffRoleID_fieldcolumn}<TD class="runner-cc  {$StaffRoleID_class}" {$StaffRoleID_style}>{$StaffRoleID_value}</TD>
-          {END StaffRoleID_fieldcolumn}{BEGIN Head_fieldcolumn}<TD class="runner-cc  {$Head_class}" {$Head_style}>{$Head_value}</TD>
+          {END FinancialYear_fieldcolumn}{BEGIN Head_fieldcolumn}<TD class="runner-cc  {$Head_class}" {$Head_style}>{$Head_value}</TD>
           {END Head_fieldcolumn}{BEGIN AddOrDeduct_fieldcolumn}<TD class="runner-cc  {$AddOrDeduct_class}" {$AddOrDeduct_style}>{$AddOrDeduct_value}</TD>
           {END AddOrDeduct_fieldcolumn}{BEGIN FixedOrPercentage_fieldcolumn}<TD class="runner-cc  {$FixedOrPercentage_class}" {$FixedOrPercentage_style}>{$FixedOrPercentage_value}</TD>
           {END FixedOrPercentage_fieldcolumn}{BEGIN PercentageOf_fieldcolumn}<TD class="runner-cc  {$PercentageOf_class}" {$PercentageOf_style}>{$PercentageOf_value}</TD>
@@ -172,9 +176,10 @@
         {END grid_row}{BEGIN grid_footer}<TR class="runner-bottomrow style1{$gridFooter_class}">{BEGIN record_footer}<TD class=runner-cl><IMG src="images/spacer.gif"></TD>
           {BEGIN listIcons_column}<TD class=runner-cc></TD>
           {END listIcons_column}{BEGIN checkbox_column}<TD class=runner-cc></TD>
-          {END checkbox_column}{BEGIN FinancialYear_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END FinancialYear_fieldheadercolumn}{BEGIN StaffRoleID_fieldheadercolumn}<TD class="runner-cc "></TD>
-          {END StaffRoleID_fieldheadercolumn}{BEGIN Head_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END checkbox_column}{BEGIN StaffRoleID_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END StaffRoleID_fieldheadercolumn}
+{BEGIN FinancialYear_fieldheadercolumn}<TD class="runner-cc "></TD>
+          {END FinancialYear_fieldheadercolumn}{BEGIN Head_fieldheadercolumn}<TD class="runner-cc "></TD>
           {END Head_fieldheadercolumn}{BEGIN AddOrDeduct_fieldheadercolumn}<TD class="runner-cc "></TD>
           {END AddOrDeduct_fieldheadercolumn}{BEGIN FixedOrPercentage_fieldheadercolumn}<TD class="runner-cc "></TD>
           {END FixedOrPercentage_fieldheadercolumn}{BEGIN PercentageOf_fieldheadercolumn}<TD class="runner-cc "></TD>

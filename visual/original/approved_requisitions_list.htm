@@ -58,6 +58,35 @@
 
 
 <td class="runner-cc filler"></td>
+{BEGIN security_block}
+<td  class="runner-cc runner-br runner-b-loggedas" {$brickclass_loggedas}><span>{BEGIN loggedas_message} 
+<span>Logged on as&nbsp;<b>{$username}</b>&nbsp;</span> 
+{END loggedas_message}
+{BEGIN guestloginbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
+</span>
+{END guestloginbutton}
+{BEGIN logoutbutton}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$logoutlink_attrs}>Log out</a>
+</span>
+{END logoutbutton}
+{BEGIN adminarea_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="admin_rights_list.php" class="runner-button" {$adminarealink_attrs}>Admin Area</a>
+	</span>
+{END adminarea_link}
+
+</span></td>
+{END security_block}
+
 
 
 </tr>
@@ -251,7 +280,10 @@
 									{END listIcons_column}	
 
 									
-																										{BEGIN Requisition__fieldheadercolumn}
+																		{BEGIN approved_requisitions_dtable_column}
+									<th class="runner-cc">&nbsp;</th>
+									{END approved_requisitions_dtable_column}
+																																			{BEGIN Requisition__fieldheadercolumn}
 									<th class="runner-cc ">
 									{BEGIN Requisition__fieldheader}
 																				<a {$Requisition__orderlinkattrs}>
@@ -270,36 +302,6 @@
 									{END Date_fieldheader}
 									</th>
 									{END Date_fieldheadercolumn}
-
-																	{BEGIN RequiredByDate_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN RequiredByDate_fieldheader}
-																				<a {$RequiredByDate_orderlinkattrs}>
-											Required By Date
-										</a>
-									{END RequiredByDate_fieldheader}
-									</th>
-									{END RequiredByDate_fieldheadercolumn}
-
-																	{BEGIN RequestMadeBy_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN RequestMadeBy_fieldheader}
-																				<a {$RequestMadeBy_orderlinkattrs}>
-											Request Made By
-										</a>
-									{END RequestMadeBy_fieldheader}
-									</th>
-									{END RequestMadeBy_fieldheadercolumn}
-
-																	{BEGIN Status_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN Status_fieldheader}
-																				<a {$Status_orderlinkattrs}>
-											Status
-										</a>
-									{END Status_fieldheader}
-									</th>
-									{END Status_fieldheadercolumn}
 
 																	{BEGIN Note_fieldheadercolumn}
 									<th class="runner-cc ">
@@ -320,26 +322,6 @@
 									{END PO__fieldheader}
 									</th>
 									{END PO__fieldheadercolumn}
-
-																	{BEGIN OrderedBy_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN OrderedBy_fieldheader}
-																				<a {$OrderedBy_orderlinkattrs}>
-											Ordered By
-										</a>
-									{END OrderedBy_fieldheader}
-									</th>
-									{END OrderedBy_fieldheadercolumn}
-
-																	{BEGIN OrderedOn_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN OrderedOn_fieldheader}
-																				<a {$OrderedOn_orderlinkattrs}>
-											Ordered On
-										</a>
-									{END OrderedOn_fieldheader}
-									</th>
-									{END OrderedOn_fieldheadercolumn}
 
 																	{BEGIN PONote_fieldheadercolumn}
 									<th class="runner-cc runner-clast">
@@ -385,6 +367,28 @@
 									{END listIcons_column}	
 
 									
+																		{BEGIN approved_requisitions_dtable_column}
+									<td class="runner-cc runner-nowrap" {$rowstyle}>
+									{BEGIN purchase_requisition_child_dtable_link}
+									<span>
+									<a {$purchase_requisition_child_dtablelink_attrs}>
+										Purchase Requisition Child
+																				<span {$purchase_requisition_child_childnumber_attr} dir="ltr">{BEGIN purchase_requisition_child_childcount}({$purchase_requisition_child_childnumber}){END purchase_requisition_child_childcount}</span>
+									</a>
+																		</br>
+									</span>
+									{END purchase_requisition_child_dtable_link}
+																											{BEGIN expense_voucher_master_dtable_link}
+									<span>
+									<a {$expense_voucher_master_dtablelink_attrs}>
+										Expense Voucher Master
+																				<span {$expense_voucher_master_childnumber_attr} dir="ltr">{BEGIN expense_voucher_master_childcount}({$expense_voucher_master_childnumber}){END expense_voucher_master_childcount}</span>
+									</a>
+																		</br>
+									</span>
+									{END expense_voucher_master_dtable_link}
+																		</td>
+									{END approved_requisitions_dtable_column}
 
 										{BEGIN Requisition__fieldcolumn}
 	<td class="runner-cc  {$Requisition__class}" {$Requisition__style}>
@@ -398,24 +402,6 @@
 	</td>
 {END Date_fieldcolumn}
 
-	{BEGIN RequiredByDate_fieldcolumn}
-	<td class="runner-cc  {$RequiredByDate_class}" {$RequiredByDate_style}>
-		{$RequiredByDate_value}
-	</td>
-{END RequiredByDate_fieldcolumn}
-
-	{BEGIN RequestMadeBy_fieldcolumn}
-	<td class="runner-cc  {$RequestMadeBy_class}" {$RequestMadeBy_style}>
-		{$RequestMadeBy_value}
-	</td>
-{END RequestMadeBy_fieldcolumn}
-
-	{BEGIN Status_fieldcolumn}
-	<td class="runner-cc  {$Status_class}" {$Status_style}>
-		{$Status_value}
-	</td>
-{END Status_fieldcolumn}
-
 	{BEGIN Note_fieldcolumn}
 	<td class="runner-cc  {$Note_class}" {$Note_style}>
 		{$Note_value}
@@ -427,18 +413,6 @@
 		{$PO__value}
 	</td>
 {END PO__fieldcolumn}
-
-	{BEGIN OrderedBy_fieldcolumn}
-	<td class="runner-cc  {$OrderedBy_class}" {$OrderedBy_style}>
-		{$OrderedBy_value}
-	</td>
-{END OrderedBy_fieldcolumn}
-
-	{BEGIN OrderedOn_fieldcolumn}
-	<td class="runner-cc  {$OrderedOn_class}" {$OrderedOn_style}>
-		{$OrderedOn_value}
-	</td>
-{END OrderedOn_fieldcolumn}
 
 	{BEGIN PONote_fieldcolumn}
 	<td class="runner-cc runner-clast {$PONote_class}" {$PONote_style}>
@@ -465,34 +439,22 @@
 									{END listIcons_column}	
 									
 									
-
+																		{BEGIN approved_requisitions_dtable_column}
+									<td class="runner-cc"></td>
+									{END approved_requisitions_dtable_column}
+									
 									{BEGIN Requisition__fieldheadercolumn}
 <td class="runner-cc "></td>
 {END Requisition__fieldheadercolumn}
 {BEGIN Date_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END Date_fieldheadercolumn}
-{BEGIN RequiredByDate_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END RequiredByDate_fieldheadercolumn}
-{BEGIN RequestMadeBy_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END RequestMadeBy_fieldheadercolumn}
-{BEGIN Status_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END Status_fieldheadercolumn}
 {BEGIN Note_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END Note_fieldheadercolumn}
 {BEGIN PO__fieldheadercolumn}
 <td class="runner-cc "></td>
 {END PO__fieldheadercolumn}
-{BEGIN OrderedBy_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END OrderedBy_fieldheadercolumn}
-{BEGIN OrderedOn_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END OrderedOn_fieldheadercolumn}
 {BEGIN PONote_fieldheadercolumn}
 <td class="runner-cc runner-clast"></td>
 {END PONote_fieldheadercolumn}

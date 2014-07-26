@@ -387,46 +387,6 @@
 									</th>
 									{END BookTitle_fieldheadercolumn}
 
-																	{BEGIN BookTypeID_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN BookTypeID_fieldheader}
-																				<a {$BookTypeID_orderlinkattrs}>
-											Book Type (subject)
-										</a>
-									{END BookTypeID_fieldheader}
-									</th>
-									{END BookTypeID_fieldheadercolumn}
-
-																	{BEGIN ISBN_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN ISBN_fieldheader}
-																				<a {$ISBN_orderlinkattrs}>
-											ISBN
-										</a>
-									{END ISBN_fieldheader}
-									</th>
-									{END ISBN_fieldheadercolumn}
-
-																	{BEGIN BarCodeNr_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN BarCodeNr_fieldheader}
-																				<a {$BarCodeNr_orderlinkattrs}>
-											Bar Code Nr
-										</a>
-									{END BarCodeNr_fieldheader}
-									</th>
-									{END BarCodeNr_fieldheadercolumn}
-
-																	{BEGIN Publisher_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN Publisher_fieldheader}
-																				<a {$Publisher_orderlinkattrs}>
-											Publisher
-										</a>
-									{END Publisher_fieldheader}
-									</th>
-									{END Publisher_fieldheadercolumn}
-
 																	{BEGIN Language_fieldheadercolumn}
 									<th class="runner-cc ">
 									{BEGIN Language_fieldheader}
@@ -438,7 +398,7 @@
 									{END Language_fieldheadercolumn}
 
 																	{BEGIN Author_fieldheadercolumn}
-									<th class="runner-cc ">
+									<th class="runner-cc runner-clast">
 									{BEGIN Author_fieldheader}
 																				<a {$Author_orderlinkattrs}>
 											Author
@@ -446,36 +406,6 @@
 									{END Author_fieldheader}
 									</th>
 									{END Author_fieldheadercolumn}
-
-																	{BEGIN PurchasedOrDonated_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN PurchasedOrDonated_fieldheader}
-																				<a {$PurchasedOrDonated_orderlinkattrs}>
-											Purchased Or Donated
-										</a>
-									{END PurchasedOrDonated_fieldheader}
-									</th>
-									{END PurchasedOrDonated_fieldheadercolumn}
-
-																	{BEGIN BookCondition_fieldheadercolumn}
-									<th class="runner-cc ">
-									{BEGIN BookCondition_fieldheader}
-																				<a {$BookCondition_orderlinkattrs}>
-											Book Condition
-										</a>
-									{END BookCondition_fieldheader}
-									</th>
-									{END BookCondition_fieldheadercolumn}
-
-																	{BEGIN StockStatus_fieldheadercolumn}
-									<th class="runner-cc runner-clast">
-									{BEGIN StockStatus_fieldheader}
-																				<a {$StockStatus_orderlinkattrs}>
-											Stock Status
-										</a>
-									{END StockStatus_fieldheader}
-									</th>
-									{END StockStatus_fieldheadercolumn}
 
 
 									
@@ -541,30 +471,6 @@
 	</td>
 {END BookTitle_fieldcolumn}
 
-	{BEGIN BookTypeID_fieldcolumn}
-	<td class="runner-cc  {$BookTypeID_class}" {$BookTypeID_style}>
-		{$BookTypeID_value}
-	</td>
-{END BookTypeID_fieldcolumn}
-
-	{BEGIN ISBN_fieldcolumn}
-	<td class="runner-cc  {$ISBN_class}" {$ISBN_style}>
-		{$ISBN_value}
-	</td>
-{END ISBN_fieldcolumn}
-
-	{BEGIN BarCodeNr_fieldcolumn}
-	<td class="runner-cc  {$BarCodeNr_class}" {$BarCodeNr_style}>
-		{$BarCodeNr_value}
-	</td>
-{END BarCodeNr_fieldcolumn}
-
-	{BEGIN Publisher_fieldcolumn}
-	<td class="runner-cc  {$Publisher_class}" {$Publisher_style}>
-		{$Publisher_value}
-	</td>
-{END Publisher_fieldcolumn}
-
 	{BEGIN Language_fieldcolumn}
 	<td class="runner-cc  {$Language_class}" {$Language_style}>
 		{$Language_value}
@@ -572,28 +478,10 @@
 {END Language_fieldcolumn}
 
 	{BEGIN Author_fieldcolumn}
-	<td class="runner-cc  {$Author_class}" {$Author_style}>
+	<td class="runner-cc runner-clast {$Author_class}" {$Author_style}>
 		{$Author_value}
 	</td>
 {END Author_fieldcolumn}
-
-	{BEGIN PurchasedOrDonated_fieldcolumn}
-	<td class="runner-cc  {$PurchasedOrDonated_class}" {$PurchasedOrDonated_style}>
-		{$PurchasedOrDonated_value}
-	</td>
-{END PurchasedOrDonated_fieldcolumn}
-
-	{BEGIN BookCondition_fieldcolumn}
-	<td class="runner-cc  {$BookCondition_class}" {$BookCondition_style}>
-		{$BookCondition_value}
-	</td>
-{END BookCondition_fieldcolumn}
-
-	{BEGIN StockStatus_fieldcolumn}
-	<td class="runner-cc runner-clast {$StockStatus_class}" {$StockStatus_style}>
-		{$StockStatus_value}
-	</td>
-{END StockStatus_fieldcolumn}
 
 
 																		<td class="runner-cr" {$rowstyle}></td>
@@ -624,33 +512,12 @@
 {BEGIN BookTitle_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END BookTitle_fieldheadercolumn}
-{BEGIN BookTypeID_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END BookTypeID_fieldheadercolumn}
-{BEGIN ISBN_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END ISBN_fieldheadercolumn}
-{BEGIN BarCodeNr_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END BarCodeNr_fieldheadercolumn}
-{BEGIN Publisher_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END Publisher_fieldheadercolumn}
 {BEGIN Language_fieldheadercolumn}
 <td class="runner-cc "></td>
 {END Language_fieldheadercolumn}
 {BEGIN Author_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END Author_fieldheadercolumn}
-{BEGIN PurchasedOrDonated_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END PurchasedOrDonated_fieldheadercolumn}
-{BEGIN BookCondition_fieldheadercolumn}
-<td class="runner-cc "></td>
-{END BookCondition_fieldheadercolumn}
-{BEGIN StockStatus_fieldheadercolumn}
 <td class="runner-cc runner-clast"></td>
-{END StockStatus_fieldheadercolumn}
+{END Author_fieldheadercolumn}
 
 									<td class="runner-cr"><img src="images/spacer.gif"></td>
 									
