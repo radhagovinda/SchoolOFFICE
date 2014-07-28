@@ -1,0 +1,361 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_add}
+<table class="runner-c runner-c-add" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-addheader {$brickclass_addheader}">Pre Admission, Add new record</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+{BEGIN message_block}
+<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+<tr class="{$cheaderclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc alt"></td><td class="runner-cr alt"><img src="images/spacer.gif"></td>
+</tr>
+
+
+	{BEGIN ApplicationNumber_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ApplicationNumber {$fielddispclass_ApplicationNumber}">
+			{BEGIN ApplicationNumber_label}Application Number{END ApplicationNumber_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ApplicationNumber {$fielddispclass_ApplicationNumber}">
+			{$ApplicationNumber_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ApplicationNumber_fieldblock}
+	{BEGIN ApplicationDate_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ApplicationDate {$fielddispclass_ApplicationDate}">
+			{BEGIN ApplicationDate_label}Application Date{END ApplicationDate_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ApplicationDate {$fielddispclass_ApplicationDate}">
+			{$ApplicationDate_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ApplicationDate_fieldblock}
+	{BEGIN ApplicationFormPrice_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ApplicationFormPrice {$fielddispclass_ApplicationFormPrice}">
+			{BEGIN ApplicationFormPrice_label}Application Form Price{END ApplicationFormPrice_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ApplicationFormPrice {$fielddispclass_ApplicationFormPrice}">
+			{$ApplicationFormPrice_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ApplicationFormPrice_fieldblock}
+	{BEGIN AcademicYear_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_AcademicYear {$fielddispclass_AcademicYear}">
+			{BEGIN AcademicYear_label}Academic Year{END AcademicYear_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_AcademicYear {$fielddispclass_AcademicYear}">
+			{$AcademicYear_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END AcademicYear_fieldblock}
+	{BEGIN ClassToAdmission_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ClassToAdmission {$fielddispclass_ClassToAdmission}">
+			{BEGIN ClassToAdmission_label}Class To Admission{END ClassToAdmission_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ClassToAdmission {$fielddispclass_ClassToAdmission}">
+			{$ClassToAdmission_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ClassToAdmission_fieldblock}
+	{BEGIN AdmissionProcess_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_AdmissionProcess {$fielddispclass_AdmissionProcess}">
+			{BEGIN AdmissionProcess_label}Admission Process{END AdmissionProcess_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_AdmissionProcess {$fielddispclass_AdmissionProcess}">
+			{$AdmissionProcess_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END AdmissionProcess_fieldblock}
+	{BEGIN EntranceExamPercentage_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_EntranceExamPercentage {$fielddispclass_EntranceExamPercentage}">
+			{BEGIN EntranceExamPercentage_label}Entrance Exam Percentage{END EntranceExamPercentage_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_EntranceExamPercentage {$fielddispclass_EntranceExamPercentage}">
+			{$EntranceExamPercentage_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END EntranceExamPercentage_fieldblock}
+	{BEGIN EntranceDetailsMarks_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_EntranceDetailsMarks {$fielddispclass_EntranceDetailsMarks}">
+			{BEGIN EntranceDetailsMarks_label}Entrance Details Marks{END EntranceDetailsMarks_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_EntranceDetailsMarks {$fielddispclass_EntranceDetailsMarks}">
+			{$EntranceDetailsMarks_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END EntranceDetailsMarks_fieldblock}
+	{BEGIN IsTransferFromOtherSchool_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_IsTransferFromOtherSchool {$fielddispclass_IsTransferFromOtherSchool}">
+			{BEGIN IsTransferFromOtherSchool_label}Is Transfer From Other School{END IsTransferFromOtherSchool_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_IsTransferFromOtherSchool {$fielddispclass_IsTransferFromOtherSchool}">
+			{$IsTransferFromOtherSchool_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END IsTransferFromOtherSchool_fieldblock}
+	{BEGIN IsAdmissionGranted_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_IsAdmissionGranted {$fielddispclass_IsAdmissionGranted}">
+			{BEGIN IsAdmissionGranted_label}Is Admission Granted{END IsAdmissionGranted_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_IsAdmissionGranted {$fielddispclass_IsAdmissionGranted}">
+			{$IsAdmissionGranted_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END IsAdmissionGranted_fieldblock}
+	{BEGIN HostelRequired_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_HostelRequired {$fielddispclass_HostelRequired}">
+			{BEGIN HostelRequired_label}Hostel Required{END HostelRequired_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_HostelRequired {$fielddispclass_HostelRequired}">
+			{$HostelRequired_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END HostelRequired_fieldblock}
+	{BEGIN BusRequired_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_BusRequired {$fielddispclass_BusRequired}">
+			{BEGIN BusRequired_label}Bus Required{END BusRequired_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_BusRequired {$fielddispclass_BusRequired}">
+			{$BusRequired_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END BusRequired_fieldblock}
+	{BEGIN SpecialCareRequired_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_SpecialCareRequired {$fielddispclass_SpecialCareRequired}">
+			{BEGIN SpecialCareRequired_label}Special Care Required{END SpecialCareRequired_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_SpecialCareRequired {$fielddispclass_SpecialCareRequired}">
+			{$SpecialCareRequired_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END SpecialCareRequired_fieldblock}
+		<tr class="runner-row style1">
+	<td class="runner-cl"></td>
+	<td colspan="2" class="runner-cc">
+		{$TabGroup Personal_Info1}&nbsp;		
+	</td>
+	<td class="runner-cr"></td>
+</tr>
+		
+				
+				
+	{BEGIN SignatureOfApplicationRecipient_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_SignatureOfApplicationRecipient {$fielddispclass_SignatureOfApplicationRecipient}">
+			{BEGIN SignatureOfApplicationRecipient_label}Signature Of Application Recipient{END SignatureOfApplicationRecipient_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_SignatureOfApplicationRecipient {$fielddispclass_SignatureOfApplicationRecipient}">
+			{$SignatureOfApplicationRecipient_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END SignatureOfApplicationRecipient_fieldblock}
+	{BEGIN SignatureOfPrincipal_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_SignatureOfPrincipal {$fielddispclass_SignatureOfPrincipal}">
+			{BEGIN SignatureOfPrincipal_label}Signature Of Principal{END SignatureOfPrincipal_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_SignatureOfPrincipal {$fielddispclass_SignatureOfPrincipal}">
+			{$SignatureOfPrincipal_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END SignatureOfPrincipal_fieldblock}
+
+
+
+{BEGIN legend}
+<tr  class="runner-row style3 runner-b-legend {$brickclass_legend}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2><span id="required_block{$id}">
+<img src="images/icon_required.gif" alt="bullet"> - Required field
+</span>
+</td><td class="runner-cr"></td></tr>{END legend}
+
+
+
+<tr  class="runner-row style2 runner-b-addbuttons {$brickclass_addbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN save_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$savebutton_attrs}>Save</a>
+</span>
+{END save_button}
+{BEGIN cancel_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$cancelbutton_attrs}>Cancel</a>
+</span>
+{END cancel_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
+</span>
+{END back_button}
+{BEGIN backToMenu_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backToMenubutton_attrs}>Back to menu</a>
+</span>
+{END backToMenu_button}</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_add}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_add}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

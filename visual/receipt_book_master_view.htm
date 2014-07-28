@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD><TITLE>{$pagetitle}</TITLE>
+<META content=IE=7 http-equiv=X-UA-Compatible>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="styles/default.css">{BEGIN rtlCSS}<LINK rel=stylesheet type=text/css href="styles/defaultRTL.css">{END rtlCSS}{BEGIN styleCSSFiles}<LINK rel=stylesheet type=text/css href="{$stylepath}">{END styleCSSFiles}{BEGIN pageCSSFiles}<LINK rel=stylesheet type=text/css href="{$pagestylepath}">{END pageCSSFiles}<!--[if IE]><LINK rel=stylesheet type=text/css href="styles/defaultIE.css">{BEGIN IEcssFiles}<LINK rel=stylesheet type=text/css href="{$stylepathIE}">{END IEcssFiles}<![endif]-->
+<META name=GENERATOR content="MSHTML 8.00.7600.16385"></HEAD>
+<BODY class="{$stylename}" {$bodyattrs}>{BEGIN body}{$header} 
+<TABLE class=runner-toptable cellPadding=0>
+  <TBODY>
+  <TR class=runner-header>
+    <TD class=runner-top colSpan=3>
+      {BEGIN container_view}
+      <TABLE class="runner-c runner-c-view" cellPadding=0 align=center>
+        <TBODY>
+        <TR class="runner-toprow style2 header">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc>
+            
+            <DIV class="runner-b-viewheader {$brickclass_viewheader}">Receipt 
+            Book Master, View record [ Receipt#: {$show_key1} 
+          ]</DIV></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR>
+        <TR class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}">
+          <TD class=runner-cl></TD>
+          <TD class="runner-cc runner-brickcontents runner-wrapper">
+            
+            {BEGIN container_fields}
+            <TABLE class="runner-c runner-c-fields" cellPadding=0>
+              <TBODY>
+              {BEGIN Receipt__fieldblock}<TR class="runner-toprow header style1 runner-b-viewfields">
+                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Receipt_ {$fielddispclass_Receipt_}"><B>Receipt#</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldvalue_Receipt_ {$fielddispclass_Receipt_}">{$Receipt__value}&nbsp; 
+                </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldlabel_Date {$fielddispclass_Date}"><B>Date</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  {$Date_value}</TD>
+                <TD class="runner-cr alt"><IMG src="images/spacer.gif"></TD></TR>
+              {END Receipt__fieldblock}{BEGIN CollectionToFund_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_CollectionToFund {$fielddispclass_CollectionToFund}"><B>Collection 
+                  To Fund</B> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldvalue_CollectionToFund {$fielddispclass_CollectionToFund}">{$CollectionToFund_value}&nbsp; 
+                  </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldlabel_CollectionHead {$fielddispclass_CollectionHead}"><B>Collection 
+                  Head</B> </DIV></TD>
+                <TD class="runner-cc alt">
+                  {$CollectionHead_value}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END CollectionToFund_fieldblock}{BEGIN CollectionHead_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_CollectionHead {$fielddispclass_CollectionHead}">&nbsp;</DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldvalue_CollectionHead {$fielddispclass_CollectionHead}">&nbsp; 
+                  </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END CollectionHead_fieldblock}{BEGIN FromName_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_FromName {$fielddispclass_FromName}"><B>From</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldvalue_FromName {$fielddispclass_FromName}">{$FromName_value}&nbsp; 
+                </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END FromName_fieldblock}{BEGIN Address_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Address {$fielddispclass_Address}"><B>Address</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldvalue_Address {$fielddispclass_Address}">{$Address_value}&nbsp; 
+                </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  
+                  <DIV class="fieldlabel_PIN {$fielddispclass_PIN}"><B>PIN</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  {$PIN_value}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Address_fieldblock}{BEGIN PIN_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_PIN {$fielddispclass_PIN}">&nbsp;</DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldvalue_PIN {$fielddispclass_PIN}">&nbsp; 
+                  </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldlabel_City {$fielddispclass_City}"><B>City</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  {$City_value}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END PIN_fieldblock}{BEGIN Mobile__fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Mobile_ {$fielddispclass_Mobile_}"><B>Mobile#</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldvalue_Mobile_ {$fielddispclass_Mobile_}">{$Mobile__value}&nbsp; 
+                </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldlabel_Mobile2_ {$fielddispclass_Mobile2_}"><B>Mobile2#</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  {$Mobile2__value}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Mobile__fieldblock}{BEGIN Phone_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Phone {$fielddispclass_Phone}"><B>Phone</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldvalue_Phone {$fielddispclass_Phone}">{$Phone_value}&nbsp; </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Phone_fieldblock}{BEGIN PaymentMode_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  </TD>
+                <TD class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cr alt"></TD></TR>
+              <TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_PaymentMode {$fielddispclass_PaymentMode}"><B>Payment 
+                  Mode</B> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldvalue_PaymentMode {$fielddispclass_PaymentMode}">{$PaymentMode_value}&nbsp; 
+                  </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cc alt">
+                  </TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END PaymentMode_fieldblock}{BEGIN Bank_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Bank {$fielddispclass_Bank}"><B>Bank</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldvalue_Bank {$fielddispclass_Bank}">{$Bank_value}&nbsp; </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldlabel_Account_ {$fielddispclass_Account_}"><B>Account#</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  {$Account__value}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Bank_fieldblock}{BEGIN Check__fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_Check_ {$fielddispclass_Check_}"><B>Check#</B> 
+                  </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV class="fieldvalue_Check_ {$fielddispclass_Check_}">{$Check__value}&nbsp; </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldlabel_CheckDate {$fielddispclass_CheckDate}"><B>Check 
+                  Date</B> </DIV></TD>
+                <TD class="runner-cc alt">
+                  {$CheckDate_value}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END Check__fieldblock}{BEGIN IfCleared_fieldblock}<TR class="runner-row style1 runner-b-viewfields">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-cc1">
+                  
+                  <DIV 
+                  class="fieldlabel_IfCleared {$fielddispclass_IfCleared}"><B>If 
+                  Cleared</B> </DIV></TD>
+                <TD class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldvalue_IfCleared {$fielddispclass_IfCleared}">{$IfCleared_value}&nbsp; 
+                  </DIV></TD>
+                <TD style="WHITE-SPACE: nowrap" class="runner-cc alt">
+                  
+                  <DIV 
+                  class="fieldlabel_ClearedOn {$fielddispclass_ClearedOn}"><B>Cleared 
+                  On</B> </DIV></TD>
+                <TD class="runner-cc alt">
+                  {$ClearedOn_value}</TD>
+                <TD class="runner-cr alt"></TD></TR>
+              {END IfCleared_fieldblock}<TR 
+              class="runner-row style2 runner-b-viewbuttons {$brickclass_viewbuttons}">
+                <TD class=runner-cl></TD>
+                <TD class="runner-cc runner-brickcontents" colSpan=2>
+                  {BEGIN prev_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$prevbutton_attrs}>&lt;&lt;&lt;</A> </SPAN>{END prev_button}{BEGIN back_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$backbutton_attrs}>Back to 
+                  list</A> </SPAN>{END back_button}{BEGIN next_button}<SPAN class=runner-btnframe><SPAN class=runner-btnleft></SPAN><SPAN class=runner-btnright></SPAN><A class=runner-button href="#" {$nextbutton_attrs}>&gt;&gt;&gt;</A> </SPAN>{END next_button}</TD>
+                <TD style="WHITE-SPACE: nowrap" 
+                class="runner-cc runner-brickcontents">
+                  </TD>
+                <TD class="runner-cc runner-brickcontents">
+                  </TD>
+                <TD class=runner-cr></TD></TR>
+              <TR class="{$cfooterclass_fields}">
+                <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+                <TD class=runner-cc></TD>
+                <TD class=runner-cc></TD>
+                <TD style="WHITE-SPACE: nowrap" class=runner-cc>
+                  </TD>
+                <TD class=runner-cc>
+                  </TD>
+                <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_fields}</TD>
+          <TD class=runner-cr></TD></TR>
+        <TR class="{$cfooterclass_view}">
+          <TD class=runner-cl><IMG src="images/spacer.gif"></TD>
+          <TD class=runner-cc></TD>
+          <TD class=runner-cr><IMG src="images/spacer.gif"></TD></TR></TBODY></TABLE>{END container_view}</TD></TR>
+  <TR class=runner-body>
+    <TD class="runner-left {$blockclass_left}"></TD>
+    <TD class="runner-center {$blockclass_center}"></TD>
+    <TD class="runner-right {$blockclass_right}"></TD></TR>
+  <TR class=runner-footer>
+    <TD class=runner-bottom 
+colSpan=3><!--%%bottom%%--></TD></TR></TBODY></TABLE>{$footer}{END body} </BODY></HTML>
